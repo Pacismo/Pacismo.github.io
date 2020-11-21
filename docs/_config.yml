@@ -30,7 +30,7 @@ twitter_username: pacismo
 github_username:  pacismo
 
 # Build settings
-theme: leap-day
+theme: jekyll-theme-leap-day
 plugins:
   - jekyll-feed
 
