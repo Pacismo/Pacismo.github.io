@@ -4,15 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hello! I am Francisco Santana, a software developer that can program in C, C++, and C#!
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I enjoy gaming and programming in my free time, and am currently in the midst of the IB program.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+Follow me on [Twitter](https://twitter.com/pacismo)! View my [personal blog](blog.franciscosp.com)! If you want, you can check out my [CAS blog](cas.franciscosp.com)!

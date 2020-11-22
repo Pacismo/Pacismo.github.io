@@ -260,7 +260,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-feed (~> 0.12)
-  jekyll-theme-leap-day
+  minima
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
