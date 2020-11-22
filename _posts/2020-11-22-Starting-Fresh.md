@@ -8,8 +8,6 @@ categories: First-post Starting-anew Coronavirus
 
 ## Hello, all
 
-I've decided to try some new things here.
-
 From now on, I will do my best to post when something interesting happens or when I feel like it. You should notice that I have changed the title to reflect this.
 
 I have also removed all of my old posts because I felt that they were not as high-quality as I had wished for them to be. I have no plans of re-posting them.
