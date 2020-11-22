@@ -21,7 +21,8 @@
 title: Francisco Santana-Pardo
 #email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Landing page for all things Francisco Santana
+  Landing page for my domain.
+  I am a software developer.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://franciscosp.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: pacismo
