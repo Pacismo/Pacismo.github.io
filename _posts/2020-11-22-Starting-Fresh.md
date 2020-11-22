@@ -18,4 +18,4 @@ I would also like to take a moment to ask you to to check out my other pages: yo
 
 I've also decided to create a landing page – hosted by GitHub Pages as of this post – which can be viewed when you go to www.franciscosp.com or franciscosp.com. I will be working on it over time, don't worry. It won't look that bad for very long. Here, I will be posting development blogs and that sort of stuff.
 
-Additionally, you can subscribe to [my blog](blog.franciscosp.com/), if you wish to do so. There, I will post things about what I do in my free time, or just whatever I feel like.
+Additionally, you can subscribe to [my blog](https://blog.franciscosp.com/), if you wish to do so. There, I will post things about what I do in my free time, or just whatever I feel like.
