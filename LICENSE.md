@@ -1,5 +1,5 @@
 ---
-permalink: /licence/
+permalink: /license/
 layout: default
 ---
 

@@ -21,9 +21,9 @@ From now on, expect more jokes. I tend to like it *light-hearted* around here. (
 
 ## About the Powershell Scripts
 
-By the way, as some of you may have noticed, there *are* Powershell scripts. These are meant to ease the management of the site into a few simple commands. You are free to take those, if you wish! However, you should read up on the [licence](/licence/) first. The licence and scripts are provided in the [repository](https://github.com/Pacismo/Pacismo.github.io). Be sure to just download the scripts!
+By the way, as some of you may have noticed, there *are* Powershell scripts. These are meant to ease the management of the site into a few simple commands. You are free to take those, if you wish! However, you should read up on the [license](/license/) first. The license and scripts are provided in the [repository](https://github.com/Pacismo/Pacismo.github.io). Be sure to just download the scripts!
 
-## Why This Page Now Has a Licence
+## Why This Page Now Has a license
 
 This is meant to protect my copyright and let people know what they can/cannot use and how they can/cannot use it. It's for the best, don't worry. In fact, for the vast majority of you, this isn't even a concern!
 
