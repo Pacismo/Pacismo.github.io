@@ -9,7 +9,7 @@ tags: First-Post Coronavirus
 
 **Hello, All.**
 
-From now on, I will do my best to post when something interesting happens or when I feel like it. You should notice that I have changed the title to reflect this.
+Welcome to my new blogging site, where you will see professional/development posts. This domain used to link to a subdomain, but no longer. It is now its own domain.
 
 I have also removed all of my old posts from there because I had felt that they were not as high-quality as I had wished for them to be. *I have no plans of re-posting them.*
 
