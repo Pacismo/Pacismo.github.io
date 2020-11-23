@@ -26,6 +26,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://franciscosp.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: pacismo
 github_username:  pacismo
+google_analytics: UA-NNNNNNNN-N
 
 # Build settings
 theme: minima
@@ -40,12 +41,18 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
+  - New-Post.ps1
+  - Start-Test.ps1
+  - Remove-Cache.ps1
+  - README.md
+  - github-pages.code-workspace
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
 #   - node_modules/
 #   - vendor/bundle/
 #   - vendor/cache/

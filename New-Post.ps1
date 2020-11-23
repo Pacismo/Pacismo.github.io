@@ -1,11 +1,24 @@
-param([Parameter(Mandatory = $true, Position = 0)][String]$Title, [Parameter(Mandatory = $false, Position = 1)][String[]]$Categories)
+# Code by Francisco Santana (https://franciscosp.com).
+# This file is meant to add a new post by creating a properly-formatted markdown file (with metadata).
+# You are free to copy this code, so long as proper attribution is provided.
+
+param(
+	[Parameter(Mandatory = $true, Position = 0)]
+	[String] $Title,
+	[Parameter(Mandatory = $false, Position = 1)]
+	[String[]] $Categories = "",
+	[Parameter(Mandatory = $false, Position = 2)]
+	[String[]] $Tags = ""
+)
 function New-Post {
 	[CmdletBinding()]
 	param (
 		[Parameter(Mandatory = $true, Position = 0)]
 		[String] $Title,
 		[Parameter(Mandatory = $false)]
-		[Switch] $AddCategories 
+		[String[]] $Categories = "",
+		[Parameter(Mandatory = $false)]
+		[String[]] $Tags = ""
 	)
 	
 	begin {
@@ -14,9 +27,9 @@ function New-Post {
 	
 	process {
 		$time = (Get-Date -Format "hh-mm-ss K").replace(":", "").replace("-", ":")
-		$date = Get-Date -Format "yyyy-mm-dd"
+		$date = Get-Date -Format "yyyy-MM-DD"
 
-		$content = "---`r`nlayout: page`r`ntitle: $Title`r`ndate: $date $time"
+		$content = "---`r`nlayout: post`r`ntitle: $Title`r`ndate: $date $time"
 		if ($Categories.Length -gt 0) {
 			$content = $content + "`r`ncategories:"
 			foreach ($item in $Categories) {
@@ -25,7 +38,17 @@ function New-Post {
 			}
 		}
 		else {
-			$content = $content + "`r`n# categories: #Add categories here!"
+			$content = $content + "`r`n# categories: # Add categories here!"
+		}
+		if ($Tags.Length -gt 0) {
+			$content = $content + "`r`ntags:"
+			foreach ($item in $Tags) {
+				$item = $item.replace(" ", "-")
+				$content = $content + " $item"
+			}
+		}
+		else {
+			$content = $content + "`r`n# tags # Add tags here!"
 		}
 		$content = $content + "`r`n# Add content below the line!`r`n---`r`n"
 
@@ -41,9 +64,5 @@ function New-Post {
 		
 	}
 }
-if ($AddCategories -eq $false) {
-	New-Post -Title $Title
-}
-else {
-	New-Post -Title $Title -AddCategories
-}
+
+New-Post -Title $Title -Categories $Categories -Tags $Tags
