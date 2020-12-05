@@ -34,7 +34,7 @@ locale: "en-US"
 
 # Build settings
 # Remote themes on GitHub Pages must be configured with this tag:
-remote_theme: mmistakes/minimal-mistakes # see: https://mmistakes.github.io/minimal-mistakes/docs/
+remote_theme: "mmistakes/minimal-mistakes" # see: https://mmistakes.github.io/minimal-mistakes/docs/
 minimal_mistakes_skin: "mint"
 
 title_separator: "|"
