@@ -121,6 +121,7 @@ footer:
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
+  - jekyll-include-cache
 
 # Add the following folders to the website.
 include: ["_pages", "_archives", "_icons"]
