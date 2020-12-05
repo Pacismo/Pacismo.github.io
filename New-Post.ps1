@@ -53,9 +53,6 @@ if ($HeaderImage -ne $null -or $OgHeaderImage -ne $null) {
 	$content = $content + "`r`n#  actions: # Put some actions here, such as a button."
 }
 
-$content = $content + "`r`ncategory_archive:`r`n  path: # Add a category path here!"
-$content = $content + "`r`ntag_archive:`r`n  path: # Add a tag path here!"
-
 $content = $content + "`r`n`n# Add content below the line!`r`n---"
 
 $file = "./_posts/$date-" + $Title.replace(" ", "-") + ".md"

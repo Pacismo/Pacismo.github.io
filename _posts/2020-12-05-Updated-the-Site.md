@@ -1,7 +1,7 @@
 ---
 title: Updated the Site
 date: 2020-12-05 08:17:42 +0800
-excerpt:  # Add an excerpt here!
+excerpt: "I have changed the theme of the site..." # Add an excerpt here!
 
 categories:
   - Site Changes
@@ -19,11 +19,6 @@ header:
 #  actions: # Put some actions here, such as a button.
 
 comments: false
-
-category_archive:
-  path: # Add a category path here!
-tag_archive:
-  path: # Add a tag path here!
 
 # Add content below the line!
 ---
