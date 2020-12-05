@@ -3,11 +3,5 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title:
+title: Welcome
 ---
-
-Welcome!
-
-*Feel free to check out what I have made!*
-
-----------

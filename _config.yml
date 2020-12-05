@@ -25,15 +25,103 @@ description: >- # this means to ignore newlines until "baseurl:"
   I am a software developer.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://franciscosp.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: pacismo
-github_username:  pacismo
-google_analytics: UA-184595877-2
+twitter_username: &twitter pacismo
+github_username: &github pacismo
+google_analytics: &ua-analytics UA-184595877-2
 # GA4_analytics: G-6WXCCETQ9V
 
+locale: "en-US"
+
 # Build settings
-theme: minima
+theme: minimal-mistakes-jekyll # see: https://mmistakes.github.io/minimal-mistakes/docs/
+minimal_mistakes_skin: "mint"
+
+title_separator: "|"
+subtitle: "General Blog"
+name: "Francisco Santana-Pardo"
+repository: "pacismo/pacismo.github.io"
+search: true
+breadcrumbs: false
+
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:year/:month/:day/:title/
+  archives:
+    output: true
+    permalink: /:path/
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      show_date: true
+      read_time: true
+      author_profile: true
+      author: Francisco Santana
+      comments: false
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      show_date: false
+      read_time: false
+      author_profile: false
+      comments: false
+      share: false
+  # _archives
+  - scope:
+      path: ""
+      type: archives
+    values:
+        layout: single
+        show_date: false
+        read_time: false
+        author_profile: false
+        comments: false
+        share: false
+
+category_archive:
+  type: liquid
+  path: /posts-by-category/
+tag_archive:
+  type: liquid
+  path: /posts-by-tag/
+
+twitter:
+  username: *twitter
+social:
+  type: Person
+  name: "Francisco Santana-Pardo"
+  links:
+    - "https://twitter.com/pacismo"
+    - "https://instagram.com/pacismo"
+    - "https://github.com/pacismo"
+    - "https://twitch.tv/pacismo"
+analytics:
+  provider: "google-universal"
+  google:
+    tracking_id: *ua-analytics
+    anonymize_ip: false
+
+footer:
+  links:
+    - label: "License"
+      url: "/license/"
+      icon: "fab fas fa-certificate"
+
 plugins:
   - jekyll-feed
+
+# Add the following folders to the website.
+include: ["_pages", "_archives", "_icons"]
 
 # Exclude from processing.
 # The following items will not be processed, by default.

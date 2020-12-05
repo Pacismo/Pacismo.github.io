@@ -1,13 +1,15 @@
 ---
 permalink: /license/
-layout: default
+layout: single
+
+title: License
+
+toc: true
 ---
 
-# Licence
+You (the reader) must follow these rules (the license) when using the contents of my repository or website. By using this website, and the contents of the Git repository, you consent to these rules applying to you. I (the author) will try to keep these rules as concise and clear as possible.
 
-You (the reader) must follow these rules (the licence) when using the contents of my repository or website. By using this website, and the contents of the Git repository, you consent to these rules applying to you. I (the author) will try to keep these rules as concise and clear as possible.
-
-These rules apply to the website, its contents, and the repository. However, any third-party contents being used in this site/repo – such as Jekyll, the static site generator – are protected by their own licences, which must be followed as well.
+These rules apply to the website, its contents, and the repository. However, any third-party contents being used in this site/repo – such as Jekyll, the static site generator – are protected by their own licenses, which must be followed as well.
 
 ## Concerning Any Scripts in this Repository
 
@@ -19,7 +21,7 @@ However, there may be exceptions (you will tell when you see them). I expect you
 
 Contents such as Blog posts or web pages are **strictly** protected by copyright, and *explicit permission* to use those contents must be recieved from me unless the derivative work practices fair use, and attributes me in your project's attributions.
 
-There may be content in the posts which are sourced from third parties. Proper attribution will be provided, and you *must* respect that content's proper licences, should you wish to use that content. Third-party content is usually protected under a different licence.
+There may be content in the posts which are sourced from third parties. Proper attribution will be provided, and you *must* respect that content's proper licenses, should you wish to use that content. Third-party content is usually protected under a different license.
 
 However, there may be exceptions (you will tell when you see them). I expect you to follow those different rules accordingly. Although, exceptions for content *will* be rarer than for scripts.
 
@@ -27,9 +29,9 @@ However, there may be exceptions (you will tell when you see them). I expect you
 
 This does not mean you aren't free to look at the source or reference or read the contents of this site. Just attribute me if you are referencing, citing, or paraphrasing any content (especially if you're an academic; plaigarism is a terrible mistake to make), but **DO NOT** copy the content directly. The source *is* protected under copyright.
 
-There also may be stuff I put in from other sources. I will provide proper attribution for that content, and so should you (if you use any of it directly). That content won't be protected under *this* licence, but the general premise may be similar.
+There also may be stuff I put in from other sources. I will provide proper attribution for that content, and so should you (if you use any of it directly). That content won't be protected under *this* license, but the general premise may be similar.
 
-There may be exceptions to this part of the licence, such as when I make an image and put it in the public domain. You will know from a different licence being provided on-site.
+There may be exceptions to this part of the license, such as when I make an image and put it in the public domain. You will know from a different license being provided on-site.
 
 ## How You May Provide Attributions
 
@@ -45,15 +47,15 @@ However, in all cases, you should mention me by name ("Francisco", "Francisco Sa
 
 This applies to all languages, countries, and users.
 
-## Concerning Any Changes to the Licence
+## Concerning Any Changes to the license
 
-This licence may change at any time, and these changes apply to all versions and contents of this site, past and present. However, the premise will stay the same:
+This license may change at any time, and these changes apply to all versions and contents of this site, past and present. However, the premise will stay the same:
 
 * Accredit me,
 
 * Don't plagiarize,
 
-* Pay attention for different licences,
+* Pay attention for different licenses,
 
 * I respect fair use of third-party contents (so should you), and
 
