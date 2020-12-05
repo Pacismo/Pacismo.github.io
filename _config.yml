@@ -33,7 +33,8 @@ google_analytics: &ua-analytics UA-184595877-2
 locale: "en-US"
 
 # Build settings
-theme: minimal-mistakes-jekyll # see: https://mmistakes.github.io/minimal-mistakes/docs/
+# Remote themes on GitHub Pages must be configured with this tag:
+remote_theme: mmistakes/minimal-mistakes # see: https://mmistakes.github.io/minimal-mistakes/docs/
 minimal_mistakes_skin: "mint"
 
 title_separator: "|"
@@ -119,6 +120,7 @@ footer:
 
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
 
 # Add the following folders to the website.
 include: ["_pages", "_archives", "_icons"]
