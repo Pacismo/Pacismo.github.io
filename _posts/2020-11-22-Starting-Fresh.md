@@ -1,15 +1,25 @@
 ---
-layout: post
 title: Starting Fresh
 date: 2020-11-22 04:11:31 +0800
-categories: Starting-anew
-tags: First-Post Coronavirus
+excerpt: "Welcome to my new site, where you will see professional/development posts."
+
+categories:
+  - "Starting Anew"
+tags: 
+  - "First Post"
+  - "Coronavirus"
+author: Francisco Santana
+
+comments: false
+
+classes: wide
+
 # Add content below the line!
 ---
 
 **Hello, All.**
 
-Welcome to my new blogging site, where you will see professional/development posts. This domain used to link to a subdomain, but no longer. It is now its own domain.
+Welcome to my new site, where you will see professional/development posts. This domain used to link to a subdomain, but no longer. It is now its own domain.
 
 I have also removed all of my old posts from there because I had felt that they were not as high-quality as I had wished for them to be. *I have no plans of re-posting them.*
 

@@ -1,7 +1,9 @@
 ---
-layout: page
-title: About
 permalink: /about/
+layout: single
+title: About
+author_profile: true
+author: Francisco Santana
 ---
 
 Hello! I am Francisco Santana, a software developer that can program in C, C++, and C#!

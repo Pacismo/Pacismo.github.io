@@ -1,9 +1,19 @@
 ---
-layout: post
 title: What to do now
 date: 2020-11-23 05:57:40 +0800
-categories: Starting-Anew
-tags: Coronavirus
+excerpt: "Now that I have this website, I want to take a moment to reflect on what steps I want to take to secure my future as a software developer, who, at the moment, wants to get into game development."
+
+categories: 
+  - "Starting Anew"
+tags:
+  - "Coronavirus"
+author: Francisco Santana
+
+comments: false
+
+toc: true
+toc_label: "Table of Contents"
+
 # Add content below the line!
 ---
 
@@ -27,4 +37,7 @@ By the way, as some of you may have noticed, there *are* Powershell scripts. The
 
 This is meant to protect my copyright and let people know what they can/cannot use and how they can/cannot use it. It's for the best, don't worry. In fact, for the vast majority of you, this isn't even a concern!
 
-Thanks for reading, and happy Thanksgiving! **-Francisco**
+This license is moreover meant to disclose the usage of the contents of this repository.
+
+Thanks for reading, and happy Thanksgiving!
+**-Francisco**

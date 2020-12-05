@@ -1,0 +1,19 @@
+main:
+  - title: "About"
+    url: "/about/"
+  - title: "CAS blog"
+    url: "https://cas.franciscosp.com/"
+  - title: "Blog"
+    url: "https://blog.franciscosp.com/"
+  - title: "Archive"
+    url: "/posts/"
+
+archive:
+  - title: View posts by...
+    children:
+      - title: "Category"
+        url: "/posts-by-category/"
+      - title: "Date"
+        url: "/posts/"
+      - title: "Tag"
+        url: "/posts-by-tag/"

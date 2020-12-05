@@ -1,0 +1,22 @@
+Francisco Santana:
+  name: "Francisco Santana"
+  #avatar: ""
+  bio: >-
+    I am a student/software developer.
+  # location: "Brunei"
+  links: # https://fontawesome.com/icons?d=gallery
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/pacismo"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/pacismo"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/pacismo"
+    - label: "Twitch.TV"
+      icon: "fab fa-fw fa-twitch"
+      url: "https://twitch.tv/pacismo"
+    - label: "Reddit"
+      icon: "fab fa-fw fa-reddit"
+      url: "https://reddit.com/u/pacismo"
