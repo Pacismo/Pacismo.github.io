@@ -1,7 +1,7 @@
 ---
 title: Updated the Site
 date: 2020-12-05 08:17:42 +0800
-excerpt: "I have changed the theme of the site..." # Add an excerpt here!
+excerpt: "I have changed the theme of the site..."
 
 categories:
   - Site Changes
