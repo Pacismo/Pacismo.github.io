@@ -1,5 +1,5 @@
 ---
-title: What to do now
+title: "What to Do Now"
 date: 2020-11-23 05:57:40 +0800
 excerpt: "Now that I have this website, I want to take a moment to reflect on what steps I want to take to secure my future as a software developer, who, at the moment, wants to get into game development."
 
