@@ -15,9 +15,9 @@ param(
 	[Switch] $DoTOC,
 	[Parameter(Mandatory = $false)]
 	[String] $HeaderImage = $null,
-	[Parameter(mandatory=$false)]
+	[Parameter(mandatory = $false)]
 	[Switch] $OverlayHeaderImage,
-	[Parameter(Mandatory=$false)]
+	[Parameter(Mandatory = $false)]
 	[String] $Excerpt = $null
 )
 
@@ -25,7 +25,7 @@ $time = (Get-Date -Format "hh-mm-ss K").replace(":", "").replace("-", ":")
 $date = Get-Date -Format "yyyy-MM-dd"
 
 $content = "---`r`ntitle: $Title`r`ndate: $date $time"
-if($Excerpt -ne $null) { $content = $content + "`r`nexcerpt: $Excerpt # Add an excerpt here!`r`n" }
+if ($Excerpt -ne $null) { $content = $content + "`r`nexcerpt: $Excerpt # Add an excerpt here!`r`n" }
 else { $content = $content + "`r`n#excerpt: $Excerpt # Add an excerpt here!`r`n" }
 
 $content = $content + "`r`ncategories: # Add categories here!"
@@ -42,15 +42,15 @@ if ($DoTOC) { $content = $content + "`r`ntoc: true # Set this to 'false' to disa
 
 if ($HeaderImage -ne $null -or $OgHeaderImage -ne $null) {
 	$content = $content + "`r`nheader:"
-	if($HeaderImage -ne $null){
-		if($OverlayHeaderImage) { $content = $content + "`r`n#  overlay_image: $HeaderImage # Set the header image here!" }
+	if ($HeaderImage -ne $null) {
+		if ($OverlayHeaderImage) { $content = $content + "`r`n#  overlay_image: $HeaderImage # Set the header image here!" }
 		else { $content = $content + "`r`n#  image: $HeaderImage # Set the header image here!" }
 	}
-	else{
+	else {
 		$content = $content + "`r`n#  image: # Set the header image here!"
 	}
-	$content = $content + "`r`n#  caption: # Put a caption here. It could be an attribution!"
-	$content = $content + "`r`n#  actions: # Put some actions here, such as a button."
+	$content = $content + "`r`n# caption: # Put a caption here. It could be an attribution!"
+	$content = $content + "`r`n# actions: # Put some actions here, such as a button."
 }
 
 $content = $content + "`r`n`n# Add content below the line!`r`n---"

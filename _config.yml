@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Francisco Santana-Pardo
+title: "Santana"
 #email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Landing page for my domain.
@@ -106,6 +106,7 @@ social:
     - "https://instagram.com/pacismo"
     - "https://github.com/pacismo"
     - "https://twitch.tv/pacismo"
+    - "https://www.linkedin.com/in/francisco-santana-0a5205204/"
 analytics:
   provider: "google-universal"
   google:
@@ -124,7 +125,12 @@ plugins:
   - jekyll-include-cache
 
 # Add the following folders to the website.
-include: ["_pages", "_archives", "_icons"]
+include: [
+  "_pages",
+  "_archives",
+  "_icons",
+  "_assets"
+]
 
 # Exclude from processing.
 # The following items will not be processed, by default.
