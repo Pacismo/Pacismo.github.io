@@ -39,3 +39,5 @@ end
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 # If you have any plugins, put them here!
+
+gem "webrick", "~> 1.7"

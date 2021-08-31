@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -82,12 +82,12 @@ defaults:
       path: ""
       type: archives
     values:
-        layout: single
-        show_date: false
-        read_time: false
-        author_profile: false
-        comments: false
-        share: false
+      layout: single
+      show_date: false
+      read_time: false
+      author_profile: false
+      comments: false
+      share: false
 
 category_archive:
   type: liquid
@@ -115,9 +115,9 @@ analytics:
 
 footer:
   links:
-    - label: "License"
-      url: "/license/"
-      icon: "fab fas fa-certificate"
+    # - label: "License"
+    #   url: "/license/"
+    #   icon: "fab fas fa-certificate"
 
 plugins:
   - jekyll-feed
@@ -125,12 +125,7 @@ plugins:
   - jekyll-include-cache
 
 # Add the following folders to the website.
-include: [
-  "_pages",
-  "_archives",
-  "_icons",
-  "_assets"
-]
+include: ["_pages", "_archives", "_icons", "_assets"]
 
 # Exclude from processing.
 # The following items will not be processed, by default.

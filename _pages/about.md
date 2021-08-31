@@ -7,8 +7,14 @@ author_profile: true
 author: Francisco Santana
 ---
 
-Hello! I am Francisco Santana, a C/C++/C# programmer!
+Hello! I am Francisco Santana, a C/C++/C# programmer! If you wish to follow me somewhere, or want to see what I've been up to, check out my social media!
 
-I enjoy gaming and programming in my free time, and am currently almost done with the IB program. Currently, I am a student at JIS, so I may not be available half the time. You can find my social media accounts on the info bar to the left, so feel free to follow me on those platforms!
+I am currently a freshman studying my computer science major in Amherst, MA, and am planning on doing some game development with the skills I have acquired over my years learning to program.  
+I plan on adding a portfolio to my website and putting some of the projects I have worked on in my free time or whatever research opportunities I have taken.
 
-This is my website, so you may find some cool projects that I have been working on (eventually!). I may eventually do software contracting when I move to America as a freelance job, so perhaps you could keep an eye out for that. I also want to try out some other things, so be sure to follow me on [Twitch](https://twitch.tv/pacismo) so that you can catch whatever livestream I decide to do. I wish to do more with my hobbies so that I have some variety in my life, so any support would be appreciated!
+I used to live in Brunei (January 2016 - July 2021) and studied at JIS throughout my stay. I did the A-Levels and IB programs there, and am grateful for the experience.
+
+I enjoy gaming, reading, and programming in my free time. One day, I hope to do some video essays on a variety of topics, including reviews for video games and books, or even tutorials for a variety of things I do.  
+I will update this site with new blog posts and a variety of content as time progresses.
+
+I am currently not open for contract work or commissions.
