@@ -15,7 +15,7 @@ param(
 	[Switch] $DoTOC,
 	[Parameter(Mandatory = $false)]
 	[String] $HeaderImage = $null,
-	[Parameter(mandatory = $false)]
+	[Parameter(Mandatory = $false)]
 	[Switch] $OverlayHeaderImage,
 	[Parameter(Mandatory = $false)]
 	[String] $Excerpt = $null
@@ -40,7 +40,7 @@ if ($DoComments) { $content = $content + "`r`ncomments: true # Set this to 'fals
 
 if ($DoTOC) { $content = $content + "`r`ntoc: true # Set this to 'false' to disable the table of contents. `r`ntoc_label: ""$Title"" # Set the title of the table of contents here!`r`ntoc_icon: ""cog""" }
 
-if ($HeaderImage -ne $null -or $OgHeaderImage -ne $null) {
+if (($HeaderImage -ne $null) -or ($OverlayHeaderImage -ne $null)) {
 	$content = $content + "`r`nheader:"
 	if ($HeaderImage -ne $null) {
 		if ($OverlayHeaderImage) { $content = $content + "`r`n#  overlay_image: $HeaderImage # Set the header image here!" }
