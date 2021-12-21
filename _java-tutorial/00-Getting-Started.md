@@ -1,12 +1,14 @@
 ---
-title: "Getting Started"
-excerpt: "Getting started with writing code in Java: getting your IDE."
-
+title: Getting Started
+excerpt: 'Getting started with writing code in Java: getting your IDE.'
 type: java-tutorial
-
 tags:
- - Getting started
- - Quickstart
+    - Getting started
+    - Quickstart
+slug: started
+date: '2021-12-20T18:00:00.082Z'
+lastmod: '2021-12-21T18:01:24.141Z'
+draft: false
 ---
 ## What is an IDE?
 

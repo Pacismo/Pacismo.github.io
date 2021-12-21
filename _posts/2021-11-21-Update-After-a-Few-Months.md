@@ -1,25 +1,20 @@
 ---
 title: Update After a Few Months
-date: 2021-11-21 06:40:43 :0500
-excerpt:  # Add an excerpt here!
-
+date: '2021-11-21 06:40:43 :0500'
+excerpt: null
 categories:
-  - "Updates"
+    - Updates
 tags:
-  - "University"
-  - "Moving Forward"
-
+    - University
+    - Moving Forward
 author: Francisco Santana
-
-toc: true # Set this to 'false' to disable the table of contents. 
-toc_label: "Table of Contents" # Set the title of the table of contents here!
-toc_icon: "cog"
-header:
-#  image:  # Set the header image here!
-# caption: # Put a caption here. It could be an attribution!
-# actions: # Put some actions here, such as a button.
-
-# Add content below the line!
+toc: true
+toc_label: Table of Contents
+toc_icon: cog
+header: null
+slug: update-months
+draft: false
+lastmod: '2021-12-21T18:10:34.713Z'
 ---
 
 Hello, everyone.

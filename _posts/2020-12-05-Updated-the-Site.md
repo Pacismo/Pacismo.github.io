@@ -1,27 +1,19 @@
 ---
-title: "Updated the Site"
-date: 2020-12-05 08:17:42 +0800
-excerpt: >-
- "I have changed the theme of the site to [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/ "mmistakes' Minimal Mistakes"). With this change, you can see that there are details about me on the left-hand side of every post. Neat! Be sure to check those links out."
-
+title: Updated the Site
+date: '2020-12-05 08:17:42 +0800'
+excerpt: '"I have changed the theme of the site to [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/ "mmistakes'' Minimal Mistakes"). With this change, you can see that there are details about me on the left-hand side of every post. Neat! Be sure to check those links out."'
 categories:
-  - Site Changes
+    - Site Changes
 tags:
-  - Changes
-  - Coronavirus
-  - New Theme
-
+    - Changes
+    - Coronavirus
+    - New Theme
 author: Francisco Santana
-
 classes: wide
-header:
-#  image:  # Set the header image here!
-#  caption: # Put a caption here. It could be an attribution!
-#  actions: # Put some actions here, such as a button.
-
+header: null
 comments: false
-
-# Add content below the line!
+draft: false
+slug: updated-site
 ---
 
 **Hello, all.**

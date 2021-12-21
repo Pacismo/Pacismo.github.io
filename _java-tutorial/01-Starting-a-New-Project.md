@@ -1,12 +1,14 @@
 ---
-title: "Starting a New Project"
-excerpt: "Making a new project for your code helps you to stay organized and write code well!"
-
+title: Starting a New Project
+excerpt: Making a new project for your Java code helps you to stay organized and write code well!
 type: java-tutorial
-
 tags:
- - "Getting Started"
- - "Quickstart"
+    - Getting Started
+    - Quickstart
+slug: starting-project
+date: '2021-12-20T18:00:00.000Z'
+lastmod: '2021-12-21T18:03:48.775Z'
+draft: false
 ---
 ## Why Make a Project?
 

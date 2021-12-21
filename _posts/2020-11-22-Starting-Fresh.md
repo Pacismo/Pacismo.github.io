@@ -1,20 +1,18 @@
 ---
-title: "Starting Fresh"
-date: 2020-11-22 04:11:31 +0800
-excerpt: "Welcome to my new site, where you will see professional/development posts."
-
+title: Starting Fresh
+date: '2020-11-22 04:11:31 +0800'
+excerpt: 'Welcome to my new site, where you will see professional/development posts.'
 categories:
-  - "Starting Anew"
-tags: 
-  - "First Post"
-  - "Coronavirus"
+    - Starting Anew
+tags:
+    - First Post
+    - Coronavirus
 author: Francisco Santana
-
 comments: false
-
 classes: wide
-
-# Add content below the line!
+lastmod: '2021-12-21T18:11:16.464Z'
+slug: starting-fresh
+draft: false
 ---
 
 **Hello, All.**
