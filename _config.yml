@@ -91,28 +91,28 @@ defaults:
       author_profile: false
       comments: false
       share: false
-  # _tutorials/java
-  - scope:
-      path: ""
-      type: java-tutorial
-    values:
-      layout: single
-      show_date: false
-      read_time: true
-      author_profile: false
-      comments: false
-      share: false
-      sidebar:
-        title: "Java Tutorial"
-        nav: java-tutorial
-      categories:
-        - "Java"
-        - "Tutorial"
-      toc: true
-      toc_label: "Table of Contents"
-      toc_icon: "cog"
-      toc_sticky: true
-      author: "Francisco Santana"
+  # # _tutorials/java
+  # - scope:
+  #     path: ""
+  #     type: java-tutorial
+  #   values:
+  #     layout: single
+  #     show_date: false
+  #     read_time: true
+  #     author_profile: false
+  #     comments: false
+  #     share: false
+  #     sidebar:
+  #       title: "Java Tutorial"
+  #       nav: java-tutorial
+  #     categories:
+  #       - "Java"
+  #       - "Tutorial"
+  #     toc: true
+  #     toc_label: "Table of Contents"
+  #     toc_icon: "cog"
+  #     toc_sticky: true
+  #     author: "Francisco Santana"
 
 category_archive:
   type: liquid
@@ -150,7 +150,7 @@ plugins:
   - jekyll-include-cache
 
 # Add the following folders to the website.
-include: ["_pages", "_archives", "_icons", "_assets", "_tutorials"]
+include: ["_pages", "_archives", "_icons", "_assets"]
 
 # Exclude from processing.
 # The following items will not be processed, by default.
