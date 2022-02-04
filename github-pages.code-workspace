@@ -5,12 +5,6 @@
 		}
 	],
 	"settings": {
-		"svg.preview.background": "black",
-		"frontMatter.content.fmHighlight": true,
-		"[markdown]": {
-		},
-		"frontMatter.framework.startCommand": "bundle exec jekyll serve",
-		"frontMatter.preview.host": "http://127.0.0.1:4000/",
-		"frontMatter.content.autoUpdateDate": true
+		"svg.preview.background": "black"
 	}
 }

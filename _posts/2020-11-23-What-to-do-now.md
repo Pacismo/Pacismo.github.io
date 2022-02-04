@@ -1,15 +1,17 @@
 ---
 title: What to Do Now
 date: '2020-11-23 05:57:40 +0800'
-excerpt: 'I now have this website, and I want to reflect on my future.'
+excerpt: 'Now that I have this website, I want to take a moment to reflect on what steps I want to take to secure my future as a software developer, who, at the moment, wants to get into game development.'
 categories:
     - Starting Anew
 tags:
     - Coronavirus
 author: Francisco Santana
 comments: false
+toc: true
+toc_label: Table of Contents
 draft: false
-lastmod: '2022-02-03T15:31:20.995Z'
+lastmod: '2021-12-21T18:08:40.051Z'
 slug: what-now
 ---
 
