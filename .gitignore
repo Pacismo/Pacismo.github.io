@@ -2,4 +2,7 @@ _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
+github-pages.code-workspace
 vendor
+frontmatter.json
+frontmatter.schema.json

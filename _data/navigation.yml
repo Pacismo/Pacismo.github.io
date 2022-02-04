@@ -1,27 +1,17 @@
 main:
   - title: "About"
-    url: "/about/"
-  - title: "Archive"
-    url: "/posts/"
-  # - title: "Tutorials"
-  #   url: "/tutorials/"
+    url: /about/
+  - title: "Articles"
+    url: /articles/
+  - title: "Archives"
+    url: /post-archive/
 
 archive:
-  - title: View posts by...
+  - title: "View posts by..."
     children:
       - title: "Category"
-        url: "/posts-by-category/"
+        url: /posts-by-category/
       - title: "Date"
-        url: "/posts/"
+        url: /post-archive/
       - title: "Tag"
-        url: "/posts-by-tag/"
-
-java-tutorial:
-  - title: "Starting With Java"
-    children:
-     - title: "Getting Started"
-       url: "/tutorials/java/00-getting-started"
-     - title: "Starting a New Project"
-       url: "/tutorials/java/01-starting-a-new-project"
-     - title: "Writing Java Code"
-       url: "/tutorials/java/02-writing-java-code"
+        url: /posts-by-tag/

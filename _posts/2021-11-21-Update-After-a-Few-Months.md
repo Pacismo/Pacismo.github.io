@@ -8,13 +8,10 @@ tags:
     - University
     - Moving Forward
 author: Francisco Santana
-toc: true
-toc_label: Table of Contents
-toc_icon: cog
 header: null
 slug: update-months
 draft: false
-lastmod: '2021-12-21T18:10:34.713Z'
+lastmod: '2022-02-03T15:31:34.585Z'
 ---
 
 Hello, everyone.

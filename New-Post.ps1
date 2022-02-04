@@ -3,59 +3,75 @@
 # You are free to copy this code, so long as proper attribution is provided.
 
 param(
-	[Parameter(Mandatory = $false)]
+	[Parameter(Mandatory = $true)]
 	[String] $Title,
+
 	[Parameter(Mandatory = $false)]
-	[String] $Author,
+	[String] $Author = "Francisco Santana",
+
 	[Parameter(Mandatory = $false)]
 	[Switch] $Wide,
+
 	[Parameter(Mandatory = $false)]
 	[Switch] $DoComments,
+
 	[Parameter(Mandatory = $false)]
 	[Switch] $DoTOC,
+
 	[Parameter(Mandatory = $false)]
 	[String] $HeaderImage = $null,
+
 	[Parameter(Mandatory = $false)]
 	[Switch] $OverlayHeaderImage,
+
 	[Parameter(Mandatory = $false)]
-	[String] $Excerpt = $null
+	[String] $Excerpt = $null,
+
+	[Parameter(Mandatory = $true)]
+	[AllowNull()]
+	[AllowEmptyString()]
+	[String] $Location = $null
 )
+
+if ($null -eq $Location -or '' -eq $Location) { $Location = "_posts" }
 
 $time = (Get-Date -Format "hh-mm-ss K").replace(":", "").replace("-", ":")
 $date = Get-Date -Format "yyyy-MM-dd"
 
-$content = "---`r`ntitle: $Title`r`ndate: $date $time"
-if ($Excerpt -ne $null) { $content = $content + "`r`nexcerpt: $Excerpt # Add an excerpt here!`r`n" }
-else { $content = $content + "`r`n#excerpt: $Excerpt # Add an excerpt here!`r`n" }
+$content = "---`ntitle: $Title`ndate: $date $time"
+if ($Excerpt -ne $null) { $content = $content + "`nexcerpt: $Excerpt # Add an excerpt here!`n" }
+else { $content = $content + "`n#excerpt: $Excerpt # Add an excerpt here!`n" }
 
-$content = $content + "`r`ncategories: # Add categories here!"
+$content = $content + "`ncategories: # Add categories here!"
 
-$content = $content + "`r`ntags: # Add tags here!"
+$content = $content + "`ntags: # Add tags here!"
 
-$content = $content + "`r`n`r`nauthor: $Author`r`n"
+$content = $content + "`n`nauthor: $Author`n"
 
-if ($Wide) { $content = $content + "`r`nclasses: wide" }
+if ($Wide) { $content = $content + "`nclasses: wide" }
 
-if ($DoComments) { $content = $content + "`r`ncomments: true # Set this to 'false' to disable comments!" }
+if ($DoComments) { $content = $content + "`ncomments: true # Set this to 'false' to disable comments!" }
 
-if ($DoTOC) { $content = $content + "`r`ntoc: true # Set this to 'false' to disable the table of contents. `r`ntoc_label: ""$Title"" # Set the title of the table of contents here!`r`ntoc_icon: ""cog""" }
+if ($DoTOC) { $content = $content + "`ntoc: true # Set this to 'false' to disable the table of contents. `ntoc_label: ""$Title"" # Set the title of the table of contents here!`ntoc_icon: ""cog""" }
+
+$content = $content + "`nslug: $($Title.replace(" ","-"))"
 
 if (($HeaderImage -ne $null) -or ($OverlayHeaderImage -ne $null)) {
-	$content = $content + "`r`nheader:"
+	$content = $content + "`nheader:"
 	if ($HeaderImage -ne $null) {
-		if ($OverlayHeaderImage) { $content = $content + "`r`n#  overlay_image: $HeaderImage # Set the header image here!" }
-		else { $content = $content + "`r`n#  image: $HeaderImage # Set the header image here!" }
+		if ($OverlayHeaderImage) { $content = $content + "`n#  overlay_image: $HeaderImage # Set the header image here!" }
+		else { $content = $content + "`n#  image: $HeaderImage # Set the header image here!" }
 	}
 	else {
-		$content = $content + "`r`n#  image: # Set the header image here!"
+		$content = $content + "`n#  image: # Set the header image here!"
 	}
-	$content = $content + "`r`n# caption: # Put a caption here. It could be an attribution!"
-	$content = $content + "`r`n# actions: # Put some actions here, such as a button."
+	$content = $content + "`n# caption: # Put a caption here. It could be an attribution!"
+	$content = $content + "`n# actions: # Put some actions here, such as a button."
 }
 
-$content = $content + "`r`n`n# Add content below the line!`r`n---"
+$content = $content + "`n`n# Add content below the line!`n---"
 
-$file = "./_posts/$date-" + $Title.replace(" ", "-") + ".md"
+$file = "./$Location/$date-" + $Title.replace(" ", "-") + ".md"
 
 New-Item -Path $file
 Add-Content -Path $file -Value $content
