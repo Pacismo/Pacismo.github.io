@@ -3,8 +3,6 @@ main:
     url: "/about/"
   - title: "Archive"
     url: "/posts/"
-  # - title: "Tutorials"
-  #   url: "/tutorials/"
 
 archive:
   - title: View posts by...
@@ -15,13 +13,3 @@ archive:
         url: "/posts/"
       - title: "Tag"
         url: "/posts-by-tag/"
-
-java-tutorial:
-  - title: "Starting With Java"
-    children:
-     - title: "Getting Started"
-       url: "/tutorials/java/00-getting-started"
-     - title: "Starting a New Project"
-       url: "/tutorials/java/01-starting-a-new-project"
-     - title: "Writing Java Code"
-       url: "/tutorials/java/02-writing-java-code"

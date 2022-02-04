@@ -37,6 +37,11 @@ locale: "en-US"
 remote_theme: mmistakes/minimal-mistakes # see: https://mmistakes.github.io/minimal-mistakes/docs/
 minimal_mistakes_skin: "mint"
 
+logo: null
+masthead_title: "Francisco Santana"
+
+paginate_path: /page:num
+
 title_separator: "|"
 subtitle: "General Blog"
 name: "Francisco Santana-Pardo"
@@ -48,12 +53,12 @@ collections:
   posts:
     output: true
     permalink: /:collection/:year/:month/:day/:title/
+  articles:
+    output: true
+    permalink: /:collection/:year/:month/:day/:title/
   archives:
     output: true
     permalink: /:path/
-  java-tutorial:
-    output: true
-    permalink: /tutorials/java/:path
 
 defaults:
   # _posts
@@ -69,6 +74,12 @@ defaults:
       comments: false
       share: true
       related: true
+      toc: true
+      toc_sticky: true
+      toc_icon: cog
+      toc_label: "Table of Contents"
+      header:
+        teaser: null
   # _pages
   - scope:
       path: ""
