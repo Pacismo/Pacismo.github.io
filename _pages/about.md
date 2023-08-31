@@ -7,14 +7,8 @@ author_profile: true
 author: Francisco Santana
 ---
 
-Hello! I am Francisco Santana, a computer scientist with experience in writing code using C, C++, C#, and Rust! If you wish to follow me somewhere, or want to see what I've been up to, check out my social media!
+Hello! My name is Francisco Santana. I am a Computer Science major at the College of Information and Computer Science at UMass Amherst. I am currently set to graduate in the Spring semester of 2024.
 
-I am currently a freshman studying my computer science major in Amherst, MA, and am planning on doing some game development with the skills I have acquired over my years learning to program.  
-I plan on adding a portfolio to my website and putting some of the projects I have worked on in my free time or whatever research opportunities I have taken.
+I used to study at Jerudong International School in Brunei (from January 2016 - July 2021), doing my GCSEs and IB courses there.
 
-I used to live in Brunei (January 2016 - July 2021) and studied at JIS throughout my stay. I did the IGCSEs and IB there, and am grateful for the experience.
-
-I enjoy gaming, reading, hiking, and programming in my free time. One day, I hope to do some video essays on a variety of topics, including reviews for video games and books, or even tutorials for a variety of things I do.  
-I will update this site with new blog posts and a variety of content as time progresses.
-
-I am currently not open for contract work or commissions.
+I enjoy gaming, hiking, and reading in my free time. I am currently proficient at C, C++, C#, Rust, Java, and TypeScript/JavaScript.
