@@ -198,13 +198,7 @@ social:
     - "https://twitter.com/pacismo"
     - "https://instagram.com/pacismo"
     - "https://github.com/pacismo"
-    - "https://twitch.tv/pacismo"
     - "https://www.linkedin.com/in/francisco-santana-0a5205204/"
-analytics:
-  provider: "google-universal"
-  google:
-    tracking_id: *ua-analytics
-    anonymize_ip: false
 
 footer:
   links:
