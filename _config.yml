@@ -27,7 +27,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://franciscosp.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: &twitter pacismo
 github_username: &github pacismo
-google_analytics: &ua-analytics UA-184595877-2
+google_analytics: &ua-analytics null # Google's analytics tools are too invasive.
 # GA4_analytics: G-6WXCCETQ9V
 
 locale: "en-US"
@@ -35,7 +35,7 @@ locale: "en-US"
 # Build settings
 # Remote themes on GitHub Pages must be configured with this tag:
 remote_theme: mmistakes/minimal-mistakes # see: https://mmistakes.github.io/minimal-mistakes/docs/
-minimal_mistakes_skin: "mint"
+minimal_mistakes_skin: "dirt"
 
 logo: null
 masthead_title: "Francisco Santana"
@@ -119,6 +119,9 @@ collections:
   archives:
     output: true
     permalink: /:path
+  portfolio:
+    output: true
+    permalink: /:collection/:path
 
 defaults:
   # _posts
@@ -162,7 +165,7 @@ defaults:
       author_profile: false
       comments: false
       share: false
-    # _articles
+  # _articles
   - scope:
       path: ""
       type: articles
@@ -181,13 +184,31 @@ defaults:
       toc_label: "Table of Contents"
       header:
         teaser: null
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: false
 
 category_archive:
-  type: liquid
-  path: /posts-by-category/
+  type: jekyll-archives
+  path: /posts/by-category
 tag_archive:
-  type: liquid
-  path: /posts-by-tag/
+  type: jekyll-archives
+  path: /posts/by-tag
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /posts/by-category/:name/
+    tag: /posts/by-tag/:name/
 
 twitter:
   username: *twitter

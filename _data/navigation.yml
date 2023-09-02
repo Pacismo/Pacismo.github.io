@@ -3,15 +3,17 @@ main:
     url: "/about/"
   - title: "Articles"
     url: "/articles/"
-  - title: "Archive"
+  - title: "Blog"
     url: "/posts/"
+  - title: "Portfolio"
+    url: "/portfolio/"
 
-archive:
+posts_archive:
   - title: View posts by...
     children:
       - title: "Category"
-        url: "/posts-by-category/"
+        url: "/posts/by-category"
       - title: "Date"
-        url: "/posts/"
+        url: "/posts/by-date"
       - title: "Tag"
-        url: "/posts-by-tag/"
+        url: "/posts/by-tag"
