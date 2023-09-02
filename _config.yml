@@ -223,9 +223,9 @@ social:
 
 footer:
   links:
-    # - label: "License"
-    #   url: "/license/"
-    #   icon: "fab fas fa-certificate"
+    - label: "About Me"
+      url: "/about/"
+      icon: "fa fa-id-card"
 
 plugins:
   - jekyll-feed
