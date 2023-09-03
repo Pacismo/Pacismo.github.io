@@ -43,7 +43,7 @@ masthead_title: "Francisco Santana"
 paginate_path: /page:num
 
 title_separator: "|"
-subtitle: "General Blog"
+subtitle: "Computer Scientist"
 name: "Francisco Santana-Pardo"
 repository: "pacismo/pacismo.github.io"
 search: true
