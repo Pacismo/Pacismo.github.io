@@ -1,8 +1,6 @@
 main:
   - title: "About"
     url: "/about/"
-  - title: "Articles"
-    url: "/articles/"
   - title: "Blog"
     url: "/posts/"
   - title: "Portfolio"
@@ -12,8 +10,8 @@ posts_archive:
   - title: View posts by...
     children:
       - title: "Category"
-        url: "/posts/by-category"
+        url: "/categories/"
       - title: "Date"
-        url: "/posts/by-date"
+        url: "/year/"
       - title: "Tag"
-        url: "/posts/by-tag"
+        url: "/tags/"

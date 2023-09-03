@@ -9,6 +9,7 @@ tags:
     - Coronavirus
 author: Francisco Santana
 comments: false
+toc: false
 classes: wide
 lastmod: '2021-12-21T18:11:16.464Z'
 slug: starting-fresh

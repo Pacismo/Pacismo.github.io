@@ -113,9 +113,6 @@ collections:
   posts:
     output: true
     permalink: /:collection/:title
-  articles:
-    output: true
-    permalink: /:collection/:title
   archives:
     output: true
     permalink: /:path
@@ -154,17 +151,33 @@ defaults:
       author_profile: false
       comments: false
       share: false
-  # _archives
+  # tag archive
   - scope:
       path: ""
-      type: archives
+      type: tag
     values:
-      layout: single
-      show_date: false
-      read_time: false
-      author_profile: false
       comments: false
       share: false
+      sidebar:
+       nav: "posts_archive"
+  # category archive
+  - scope:
+      path: ""
+      type: category
+    values:
+      comments: false
+      share: false
+      sidebar:
+       nav: "posts_archive"
+  # yearly archive
+  - scope:
+      path: "/year/"
+      type: posts
+    values:
+      comments: false
+      share: false
+      sidebar:
+       nav: "posts_archive"
   # _articles
   - scope:
       path: ""
@@ -195,20 +208,27 @@ defaults:
 
 category_archive:
   type: jekyll-archives
-  path: /posts/by-category
+  path: /categories/
 tag_archive:
   type: jekyll-archives
-  path: /posts/by-tag
+  path: /tags/
+year_archive:
+  type: jekyll-archives
+  path: /year/
+
 jekyll-archives:
   enabled:
     - categories
     - tags
+    - year
   layouts:
     category: archive-taxonomy
     tag: archive-taxonomy
+    year: archive-taxonomy
   permalinks:
-    category: /posts/by-category/:name/
-    tag: /posts/by-tag/:name/
+    category: /categories/:name/
+    tag: /tags/:name/
+    year: /year/:year/
 
 twitter:
   username: *twitter
@@ -233,7 +253,7 @@ plugins:
   - jekyll-include-cache
 
 # Add the following folders to the website.
-include: ["_pages", "_archives", "_icons", "_assets"]
+include: ["_pages", "_icons", "_assets"]
 
 # Exclude from processing.
 # The following items will not be processed, by default.
