@@ -11,7 +11,7 @@ posts_archive:
     children:
       - title: "Category"
         url: "/categories/"
-      - title: "Date"
+      - title: "Year"
         url: "/year/"
       - title: "Tag"
         url: "/tags/"

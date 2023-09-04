@@ -152,25 +152,6 @@ defaults:
       author_profile: false
       comments: false
       share: false
-  # _articles
-  - scope:
-      path: ""
-      type: articles
-    values:
-      layout: single
-      show_date: true
-      read_time: true
-      author_profile: true
-      comments: false
-      share: true
-      author: Francisco Santana
-      related: true
-      toc: true
-      toc_sticky: true
-      toc_icon: cog
-      toc_label: "Table of Contents"
-      header:
-        teaser: null
   # _portfolio
   - scope:
       path: ""
@@ -179,6 +160,9 @@ defaults:
       layout: single
       author_profile: false
       share: false
+      comments: false
+      header:
+       overlay_color: "#edb"
 
 category_archive:
   type: jekyll-archives
@@ -241,6 +225,7 @@ include: ["_pages", "_icons", "_assets"]
 exclude:
   - New-Post.ps1
   - Start-Test.ps1
+  - New-Portfolio-Entry.ps1
   - Remove-Cache.ps1
   - README.md
   - CNAME
