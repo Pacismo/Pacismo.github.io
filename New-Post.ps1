@@ -3,9 +3,9 @@
 # You are free to copy this code, so long as proper attribution is provided.
 
 param(
-	[Parameter(Mandatory = $false)]
+	[Parameter(Mandatory = $true)]
 	[String] $Title,
-	[Parameter(Mandatory = $false)]
+	[Parameter(Mandatory = $true)]
 	[String] $Author,
 	[Parameter(Mandatory = $false)]
 	[Switch] $Wide,
