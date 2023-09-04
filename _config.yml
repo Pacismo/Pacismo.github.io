@@ -41,7 +41,7 @@ logo: null
 masthead_title: "Francisco Santana"
 
 # paginate_path: /page:num
-paginate: off
+paginate: 
 
 title_separator: "|"
 subtitle: "Computer Scientist"
