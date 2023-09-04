@@ -34,13 +34,14 @@ locale: "en-US"
 
 # Build settings
 # Remote themes on GitHub Pages must be configured with this tag:
-remote_theme: mmistakes/minimal-mistakes # see: https://mmistakes.github.io/minimal-mistakes/docs/
+theme: minimal-mistakes-jekyll # see: https://mmistakes.github.io/minimal-mistakes/docs/
 minimal_mistakes_skin: "dirt"
 
 logo: null
 masthead_title: "Francisco Santana"
 
-paginate_path: /page:num
+# paginate_path: /page:num
+paginate: off
 
 title_separator: "|"
 subtitle: "Computer Scientist"
@@ -224,6 +225,7 @@ plugins:
   - jekyll-feed
   - jekyll-remote-theme
   - jekyll-include-cache
+  - jekyll-paginate
 
 # Add the following folders to the website.
 include: ["_pages", "_icons", "_assets"]
@@ -241,12 +243,13 @@ exclude:
   - Start-Test.ps1
   - Remove-Cache.ps1
   - README.md
-  - github-pages.code-workspace
   - CNAME
   - Gemfile
   - Gemfile.lock
   - .nojekyll
   - .github
+  - _site
+  - .jekyll-cache/
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/

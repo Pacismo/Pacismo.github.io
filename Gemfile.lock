@@ -1,3 +1,15 @@
+GIT
+  remote: https://github.com/pacismo/minimal-mistakes.git
+  revision: 2383d1953a2c92f34864cf312f51f77dd6a9de6b
+  specs:
+    minimal-mistakes-jekyll (4.24.0)
+      jekyll (>= 3.7, < 5.0)
+      jekyll-feed (~> 0.1)
+      jekyll-gist (~> 1.5)
+      jekyll-include-cache (~> 0.1)
+      jekyll-paginate (~> 1.1)
+      jekyll-sitemap (~> 1.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -99,13 +111,6 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
-    minimal-mistakes-jekyll (4.24.0)
-      jekyll (>= 3.7, < 5.0)
-      jekyll-feed (~> 0.1)
-      jekyll-gist (~> 1.5)
-      jekyll-include-cache (~> 0.1)
-      jekyll-paginate (~> 1.1)
-      jekyll-sitemap (~> 1.3)
     minitest (5.19.0)
     nokogiri (1.15.4-x64-mingw-ucrt)
       racc (~> 1.4)
@@ -162,7 +167,7 @@ DEPENDENCIES
   jekyll-remote-theme
   jekyll-sitemap
   jemoji
-  minimal-mistakes-jekyll
+  minimal-mistakes-jekyll!
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
