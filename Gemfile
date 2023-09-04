@@ -18,7 +18,7 @@ gem "jekyll-include-cache"
 gem "jekyll-remote-theme"
 
 #gem "minima"
-gem "minimal-mistakes-jekyll"
+gem "minimal-mistakes-jekyll", :github => "pacismo/minimal-mistakes"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-paginate-v2"
