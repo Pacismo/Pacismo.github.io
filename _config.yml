@@ -225,7 +225,7 @@ plugins:
   - jekyll-feed
   - jekyll-remote-theme
   - jekyll-include-cache
-  - jekyll-paginate
+  - jekyll-paginate-v2
 
 # Add the following folders to the website.
 include: ["_pages", "_icons", "_assets"]
