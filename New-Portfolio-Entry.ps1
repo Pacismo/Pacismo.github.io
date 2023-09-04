@@ -1,0 +1,70 @@
+# Code by Francisco Santana (https://franciscosp.com).
+# This file is meant to add a new post by creating a properly-formatted markdown file (with metadata).
+# You are free to copy this code, so long as proper attribution is provided.
+
+param(
+	[Parameter(Mandatory = $true)]
+	[String] $Title,
+	[Parameter(Mandatory = $true)]
+	[String] $Author,
+	[Parameter(Mandatory = $false)]
+	[Switch] $Wide,
+	[Parameter(Mandatory = $false)]
+	[Switch] $DoComments,
+	[Parameter(Mandatory = $false)]
+	[Switch] $DoTOC,
+	[Parameter(Mandatory = $false)]
+	[String] $HeaderImage = $null,
+	[Parameter(Mandatory = $false)]
+	[String] $OverlayColor = $null,
+	[Parameter(Mandatory = $false)]
+	[Switch] $OverlayHeaderImage,
+	[Parameter(Mandatory = $true)]
+	[String] $Excerpt = $null,
+	[Parameter(Mandatory = $true)]
+	[String] $TeaserImage
+)
+
+$time = (Get-Date -Format "hh-mm-ss K").replace(":", "").replace("-", ":")
+$date = Get-Date -Format "yyyy-MM-dd"
+
+$content = "---`r`ntitle: $Title`r`ndate: $date $time"
+if ($Excerpt -ne $null) { $content = $content + "`r`nexcerpt: $Excerpt # Add an excerpt here!`r`n" }
+else { $content = $content + "`r`n#excerpt: $Excerpt # Add an excerpt here!`r`n" }
+
+$content = $content + "`r`ncategories: # Add categories here!"
+
+$content = $content + "`r`ntags: # Add tags here!"
+
+$content = $content + "`r`n`r`nauthor: $Author`r`n"
+
+if ($Wide) { $content = $content + "`r`nclasses: wide" }
+
+if ($DoComments) { $content = $content + "`r`ncomments: true # Set this to 'false' to disable comments!" }
+
+if ($DoTOC) { $content = $content + "`r`ntoc: true # Set this to 'false' to disable the table of contents. `r`ntoc_label: ""$Title"" # Set the title of the table of contents here!`r`ntoc_icon: ""cog""" }
+
+$content = $content + "`r`nheader:"
+if ($null -ne $HeaderImage) {
+	if ($OverlayHeaderImage) { $content = $content + "`r`n# overlay_image: $HeaderImage # Set the header image here!" }
+	else { $content = $content + "`r`n# image: $HeaderImage # Set the header image here!" }
+}
+elseif ($null -ne $HeaderColor) {
+	$content = $content + "`r`n overlay_color: $OverlayColor # Set the overlay color here"
+}
+else {
+	$content = $content + "`r`n# image: # Set the header image here!"
+}
+$content = $content + "`r`n# caption: # Put a caption here. It could be an attribution!"
+$content = $content + "`r`n# actions: # Put some actions here, such as a button."
+$content = $content + "`r`n teaser: $TeaserImage # This is for the portfolio collections view."
+
+
+$content = $content + "`r`n`n# Add content below the line!`r`n---"
+
+$file = "./_portfolio/" + $Title.replace(" ", "-") + ".md"
+
+New-Item -Path $file
+Add-Content -Path $file -Value $content
+
+Write-Host "Successfully created a new blog post in $file.`n`tOpen it and modify its contents!"
