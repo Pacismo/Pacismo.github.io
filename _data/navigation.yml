@@ -10,8 +10,8 @@ posts_archive:
   - title: View posts by...
     children:
       - title: "Category"
-        url: "/categories/"
+        url: "/posts/by-category/"
       - title: "Year"
-        url: "/year/"
+        url: "/posts/by-year/"
       - title: "Tag"
-        url: "/tags/"
+        url: "/posts/by-tag/"

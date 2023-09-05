@@ -22,9 +22,9 @@ gem "minimal-mistakes-jekyll", :github => "pacismo/minimal-mistakes"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-paginate-v2"
+  gem "jekyll-feed"
   gem "jekyll-sitemap"
   gem "jekyll-gist"
-  gem "jekyll-feed"
   gem "jemoji"
   gem "jekyll-algolia"
   gem "jekyll-archives"

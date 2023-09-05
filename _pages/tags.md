@@ -1,6 +1,6 @@
 ---
 title: "Posts by Tag"
-permalink: /tags/
+permalink: /posts/by-tag/
 layout: tags
 sidebar:
  nav: "posts_archive"
