@@ -35,7 +35,7 @@ locale: "en-US"
 # Build settings
 # Remote themes on GitHub Pages must be configured with this tag:
 theme: minimal-mistakes-jekyll # see: https://mmistakes.github.io/minimal-mistakes/docs/
-minimal_mistakes_skin: "dirt"
+minimal_mistakes_skin: "silver" # "dirt"
 homepage_hide_posts: false
 follow_label: false
 

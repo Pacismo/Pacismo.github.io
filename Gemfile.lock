@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/pacismo/minimal-mistakes.git
-  revision: ff60b9bf364f2c03845d2e6024e021540b6df2e0
+  revision: 372200a11a10af952e774a2e06a004d57be783ca
   specs:
     minimal-mistakes-jekyll (4.24.0)
       jekyll (>= 3.7, < 5.0)
