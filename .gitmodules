@@ -1,0 +1,3 @@
+[submodule "themes/franciscosp-theme"]
+	path = themes/franciscosp-theme
+	url = https://github.com/pacismo/franciscosp-theme
