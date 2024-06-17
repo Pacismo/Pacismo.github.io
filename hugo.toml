@@ -1,3 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://franciscosp.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Francisco Santana'
+theme = "franciscosp-theme"
