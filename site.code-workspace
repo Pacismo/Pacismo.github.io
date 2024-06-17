@@ -1,0 +1,12 @@
+{
+    "folders": [
+        {
+            "name": "Root",
+            "path": "./"
+        },
+        {
+            "name": "Theme",
+            "path": "themes/franciscosp-theme/"
+        }
+    ]
+}
