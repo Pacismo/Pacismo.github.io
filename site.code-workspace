@@ -8,10 +8,5 @@
             "name": "Theme",
             "path": "themes/franciscosp-theme/"
         }
-    ],
-    "settings": {
-        "files.associations": {
-            "*.html": "liquid"
-        }
-    },
+    ]
 }
