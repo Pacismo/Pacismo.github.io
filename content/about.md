@@ -1,7 +1,6 @@
 +++
 title = 'About'
 date = 2024-06-18T13:28:17-05:00
-draft = true
 layout = 'about'
 +++
 
