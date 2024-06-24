@@ -2,3 +2,11 @@ baseURL = 'https://franciscosp.com/'
 languageCode = 'en-us'
 title = 'Francisco Santana'
 theme = "franciscosp-theme"
+
+[params]
+home.pageCount = 5
+home.paginate = ["posts"]
+
+[permalinks]
+[permalinks.page]
+posts = "/posts/:year/:month/:slug/"
