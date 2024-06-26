@@ -6,6 +6,7 @@ theme = "franciscosp-theme"
 [params]
 home.pageCount = 5
 home.paginate = ["posts"]
+home.spotlight.characterLimit = 2000
 
 [permalinks]
 [permalinks.page]
