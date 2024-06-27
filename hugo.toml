@@ -3,10 +3,11 @@ languageCode = 'en-us'
 title = 'Francisco Santana'
 theme = "franciscosp-theme"
 
-[params]
-home.pageCount = 5
-home.paginate = ["posts"]
-home.spotlight.characterLimit = 2000
+[params.home]
+pageCount = 5
+paginate = ["posts"]
+resume = false
+spotlight.characterLimit = 2000
 
 [permalinks]
 [permalinks.page]
