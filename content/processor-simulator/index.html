@@ -1,0 +1,171 @@
++++
+layout = "empty"
++++
+
+<link rel="stylesheet" href="./simulator.css">
+<link rel="stylesheet" href="./form.css">
+<script type="module">
+    import * as app from "./simulator.js";
+
+    window.app = app;
+</script>
+
+<div class="sim-header">
+    <div>
+        <button id="show_config_button" onclick="app.show_config()">Configuration</button>
+        <button id="show_stats_button" onclick="app.show_stats()">Statistics</button>
+        <button id="clock_button" onclick="app.clock()">Clock</button>
+        <button id="step_button" onclick="app.step()">Step</button>
+        <button id="run_button" onclick="app.run()">Run</button>
+    </div>
+</div>
+
+<div class="sim-container">
+
+    <div id="pipeline_view">
+        <h2 class="label">Pipeline</h2>
+
+        <table id="pipeline_table">
+            <tr>
+                <th title="Click to show details." onclick="app.pipeline.show_details('fetch')">Fetch</th>
+                <th title="Click to show details." onclick="app.pipeline.show_details('decode')">Decode</th>
+                <th title="Click to show details." onclick="app.pipeline.show_details('execute')">Execute</th>
+                <th title="Click to show details." onclick="app.pipeline.show_details('memory')">Memory</th>
+                <th title="Click to show details." onclick="app.pipeline.show_details('writeback')">Writeback</th>
+            </tr>
+            <tr>
+                <td title="Click to show details." id="fetch_state" onclick="app.pipeline.show_details('fetch')">
+                </td>
+                <td title="Click to show details." id="decode_state" onclick="app.pipeline.show_details('decode')">
+                </td>
+                <td title="Click to show details." id="execute_state" onclick="app.pipeline.show_details('execute')">
+                </td>
+                <td title="Click to show details." id="memory_state" onclick="app.pipeline.show_details('memory')">
+                </td>
+                <td title="Click to show details." id="writeback_state"
+                    onclick="app.pipeline.show_details('writeback')"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="register_view">
+        <h2 class="label">Registers</h2>
+
+        <div>
+            <table id="register_table">
+                <tr>
+                    <th>V0</th>
+                    <th>V1</th>
+                    <th>V2</th>
+                    <th>V3</th>
+                    <th>V4</th>
+                    <th>V5</th>
+                    <th>V6</th>
+                    <th>V7</th>
+                    <th>V8</th>
+                    <th>V9</th>
+                    <th>VA</th>
+                    <th>VB</th>
+                    <th>VC</th>
+                    <th>VD</th>
+                    <th>VE</th>
+                    <th>VF</th>
+                    <th>SP</th>
+                    <th>BP</th>
+                    <th>LP</th>
+                    <th>PC</th>
+                    <th>ZF</th>
+                    <th>OF</th>
+                    <th>EPS</th>
+                    <th>NAN</th>
+                    <th>INF</th>
+                </tr>
+                <tr>
+                    <td id="reg_v0_val">0</td>
+                    <td id="reg_v1_val">0</td>
+                    <td id="reg_v2_val">0</td>
+                    <td id="reg_v3_val">0</td>
+                    <td id="reg_v4_val">0</td>
+                    <td id="reg_v5_val">0</td>
+                    <td id="reg_v6_val">0</td>
+                    <td id="reg_v7_val">0</td>
+                    <td id="reg_v8_val">0</td>
+                    <td id="reg_v9_val">0</td>
+                    <td id="reg_va_val">0</td>
+                    <td id="reg_vb_val">0</td>
+                    <td id="reg_vc_val">0</td>
+                    <td id="reg_vd_val">0</td>
+                    <td id="reg_ve_val">0</td>
+                    <td id="reg_vf_val">0</td>
+                    <td id="reg_sp_val">0</td>
+                    <td id="reg_bp_val">0</td>
+                    <td id="reg_lp_val">0</td>
+                    <td id="reg_pc_val">0</td>
+                    <td id="reg_zf_val">0</td>
+                    <td id="reg_of_val">0</td>
+                    <td id="reg_eps_val">0</td>
+                    <td id="reg_nan_val">0</td>
+                    <td id="reg_inf_val">0</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="watchlist_view">
+        <h2 class="label">Watchlist</h2>
+
+        <div class="form-container">
+            <form id="watchlist_form">
+                <label for="watchlist_address">Address</label>
+                <input id="watchlist_address" name="watchlist_address" type="number" min="0" max="4294967295" value="0"
+                    class="monospace">
+
+                <label for="watchlist_type">Type</label>
+                <select id="watchlist_type" name="watchlist_type">
+                    <option value="byte" selected>Byte</option>
+                    <option value="short">Short</option>
+                    <option value="word">Word</option>
+                    <option value="float">Float</option>
+                </select>
+
+                <input type="button" onclick="app.watchlist.add_to_watchlist()" value="Add to Watchlist">
+            </form>
+        </div>
+
+        <table id="watchlist_table">
+            <tr>
+                <th></th>
+                <th>Address</th>
+                <th>Type</th>
+                <th>Value</th>
+                <th></th>
+            </tr>
+        </table>
+    </div>
+
+    <div id="cache_view">
+        <h2 class="label">Cache <select id="cache_view_selector" name="cache_view_selector" class="h2-select"
+                onchange="app.cache.update(true)"></select></h2>
+
+        <div id="cache_view_content"></div>
+    </div>
+
+    <div id="memory_view">
+        <h2 class="label">Memory <select id="memory_view_selector" name="memoryview_selector" class="h2-select"
+                onchange="app.memory.switch_mode();">
+                <option value="data" selected>Data</option>
+                <option value="disassembly">Disassembly</option>
+            </select></h2>
+
+        <div id="memory_view_switcher">
+            <button id="memory_view_prev" onclick="app.memory.previous_page()">←</button>
+            <p id="memory_view_pageid">PAGE</p>
+            <button id="memory_view_next" onclick="app.memory.next_page()">→</button>
+        </div>
+
+        <div>
+            <table id="memory_table"></table>
+        </div>
+    </div>
+
+</div>

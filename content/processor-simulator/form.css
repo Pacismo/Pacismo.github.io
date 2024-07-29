@@ -1,0 +1,79 @@
+div.form-container {
+    display: block;
+
+    min-width: 10cm;
+    max-width: 10cm;
+}
+
+div.form-container>form {
+    grid-column: main;
+    width: 100%;
+}
+
+form fieldset {
+    border-radius: 4px;
+}
+
+form div.file-input {
+    margin-top: 4px;
+    width: 100%;
+}
+
+form div.file-input label {
+    padding: 4px;
+}
+
+fieldset.grid {
+    display: grid;
+    grid-template-columns: auto [label] max-content [field] max-content auto;
+}
+
+fieldset.grid label {
+    display: inline-block;
+    grid-column: label;
+    text-align: right;
+    margin-right: 4pt;
+}
+
+fieldset.grid input {
+    display: inline-block;
+    grid-column: field;
+}
+
+fieldset.cache-config {
+    display: grid;
+    grid-template-columns: auto [data] max-content [instruction] max-content auto;
+}
+
+fieldset.cache-config div.cache-entry {
+    display: inline-block;
+    grid-row: 2;
+}
+
+fieldset.cache-config div.label {
+    grid-row: 1;
+    grid-column: 1/-1;
+}
+
+fieldset.cache-config div.cache-entry.data {
+    grid-column: data;
+}
+
+fieldset.cache-config div.cache-entry.instruction {
+    grid-column: instruction;
+}
+
+fieldset label {
+    min-width: 10%;
+}
+
+form input.submit-button {
+    display: block;
+    width: 4cm;
+    font-size: 8pt;
+    margin-top: 4pt;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8pt;
+    border: 1pt solid black;
+}
