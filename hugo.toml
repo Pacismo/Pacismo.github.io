@@ -3,6 +3,26 @@ languageCode = 'en-us'
 title = 'Francisco Santana'
 theme = "franciscosp-theme"
 
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'About'
+pageRef = '/about'
+weight = 20
+
+[[menus.main]]
+name = 'Posts'
+pageRef = '/posts'
+weight = 30
+
+[[menus.main]]
+name = 'Projects'
+pageRef = '/projects'
+weight = 31
+
 [params]
 math = true
 
@@ -15,3 +35,8 @@ spotlight.characterLimit = 2000
 [permalinks]
 [permalinks.page]
 posts = "/posts/:year/:month/:slug/"
+
+[pagination]
+disableAliases = false
+pagerSize = 10
+path = 'page'
