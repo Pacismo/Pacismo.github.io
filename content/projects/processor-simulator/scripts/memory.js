@@ -140,9 +140,11 @@ export default class Memory {
         cell.classList = '';
       }
 
-      cell.title = `Address: ${
-          address.toString(16).toUpperCase().padStart(
-              8, '0')}\nDecimal Address: ${address}\nClick to put address in watchlist as selected type`;
+      cell.title =
+          `Address: ${address.toString(16).toUpperCase().padStart(8, '0')}${
+              (values && !disasm) ?
+                  `\nDecimal Value: ${values[i]}` :
+                  ''}\nClick to put address in watchlist as selected type`;
       cell.onclick = () => this.on_cell_click(address);
     }
 

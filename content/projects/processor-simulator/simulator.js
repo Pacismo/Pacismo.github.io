@@ -28,6 +28,9 @@ while (true) try {
     });
   }
 
+document.getElementById('sim_main').classList.remove('hidden');
+document.getElementById('sim_init').classList.add('hidden');
+
 export const sim =
     new SimulationState(init_form.configuration, init_form.bytecode);
 

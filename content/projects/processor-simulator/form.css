@@ -1,15 +1,3 @@
-div.form-container {
-    display: block;
-
-    min-width: 10cm;
-    max-width: 10cm;
-}
-
-div.form-container>form {
-    grid-column: main;
-    width: 100%;
-}
-
 form fieldset {
     border-radius: 4px;
 }
@@ -38,6 +26,11 @@ fieldset.grid label {
 fieldset.grid input {
     display: inline-block;
     grid-column: field;
+}
+
+fieldset.grid input, fieldset.grid label {
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
 fieldset.cache-config {
@@ -75,5 +68,4 @@ form input.submit-button {
     margin-left: auto;
     margin-right: auto;
     padding: 8pt;
-    border: 1pt solid black;
 }

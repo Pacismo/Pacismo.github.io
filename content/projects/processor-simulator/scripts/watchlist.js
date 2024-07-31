@@ -53,21 +53,20 @@ export default class Watchlist {
     let address_cell = document.createElement('th');
     let type_cell = document.createElement('td');
     let value_cell = document.createElement('td');
-    let remove_cell = document.createElement('td');
-    let remove_button = document.createElement('button');
 
-    address_cell.textContent = address.toString(16).padStart(8, '0');
-    address_cell.classList = 'monospace';
+    let addr = document.createElement('span');
+    let rem = document.createElement('span');
+    addr.textContent = address.toString(16).toUpperCase().padStart(8, '0');
+    addr.classList = 'address-value'
+    rem.textContent = 'X';
+    rem.classList = 'remove';
+    address_cell.append(rem, addr);
+    address_cell.classList = 'address';
+    address_cell.onclick = () => this.remove_from_watchlist(address);
     type_cell.textContent = type;
-    value_cell.classList = 'monospace';
-    remove_cell.append(remove_button);
-    remove_button.onclick = () => this.remove_from_watchlist(address);
-    remove_button.textContent = 'X';
-    remove_button.className = 'monospace watch-delete';
 
-    row.append(
-        document.createElement('td'), address_cell, type_cell, value_cell,
-        remove_cell);
+    row.append(address_cell, type_cell, value_cell);
+    row.classList = 'monospace';
     this.table.append(row);
     this.entries[address] = {
       row,
