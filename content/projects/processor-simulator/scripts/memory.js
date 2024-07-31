@@ -142,7 +142,8 @@ export default class Memory {
 
       cell.title = `Address: ${
           address.toString(16).toUpperCase().padStart(
-              8, '0')}\nDecimal Address: ${address}`;
+              8, '0')}\nDecimal Address: ${address}\nClick to put address in watchlist as selected type`;
+      cell.onclick = () => this.on_cell_click(address);
     }
 
     this.page_label.textContent = `${this.region_id + 1} / ${MEMCONF.regions}`;
@@ -173,4 +174,7 @@ export default class Memory {
       this.update();
     }
   }
+
+  /** @type {(address: number) => void} */
+  on_cell_click = () => {}
 }

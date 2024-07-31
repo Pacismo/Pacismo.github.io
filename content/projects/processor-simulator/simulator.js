@@ -19,14 +19,12 @@ while (true) try {
     await close_popup('Error', container => {
       container.className = 'error-message';
 
-      e.toString().split(/\n|\r\n/).forEach(l => {
-        let p = document.createElement('code');
-        p.classList = 'monospace';
-        p.style =
-            'margin-top: 0; margin-bottom: 0; display: block; white-space: pre;';
-        container.appendChild(p);
-        p.textContent = l;
-      });
+      let p = document.createElement('code');
+      p.classList = 'monospace';
+      p.style =
+          'margin-top: 0; margin-bottom: 0; display: block; white-space: pre;';
+      container.appendChild(p);
+      p.textContent = e.toString();
     });
   }
 
@@ -73,6 +71,11 @@ export const cache =
 
 export const memory = new Memory(
     sim, 'memory_table', 'memory_view_pageid', 'memory_view_selector');
+
+memory.on_cell_click = a => {
+  watchlist.address_field.value = a;
+  watchlist.add_to_watchlist();
+};
 
 export function show_config() {
   close_popup('Configuration', e => {

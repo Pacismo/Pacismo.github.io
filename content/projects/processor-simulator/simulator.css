@@ -345,3 +345,7 @@ div#cache_view_content table tr:first-child th {
     top: -1px;
     z-index: 1;
 }
+
+select {
+    padding: 4px;
+}
