@@ -25,6 +25,7 @@ weight = 31
 
 [params]
 math = true
+fa_code = "ffc224c250"
 
 [params.home]
 pageCount = 5
