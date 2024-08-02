@@ -20,7 +20,7 @@ while (true) try {
       container.className = 'error-message';
 
       let p = document.createElement('code');
-      p.classList = 'monospace';
+      p.classList.add('monospace');
       p.style =
           'margin-top: 0; margin-bottom: 0; display: block; white-space: pre;';
       container.appendChild(p);
@@ -137,7 +137,6 @@ export function step() {
 
 export function run() {
   sim.run();
-  sim.is_done();
   update_views();
 }
 

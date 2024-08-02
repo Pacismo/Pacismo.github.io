@@ -43,12 +43,10 @@ export function close_popup(title, populator) {
     pop_title.textContent = title;
     container.appendChild(pop_title);
     pop_title.style = 'margin: 0;';
-    container.appendChild(document.createElement('hr'));
 
     let message = document.createElement('div');
+    message.classList = 'message';
     container.appendChild(message);
-
-    container.appendChild(document.createElement('hr'));
 
     let exit_button = document.createElement('button');
     container.appendChild(exit_button);

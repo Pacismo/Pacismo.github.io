@@ -1,9 +1,11 @@
-import {popup} from './popup.js';
 import {assemble_files, CacheConfiguration, CacheMode, Input, SimulationConfiguration} from './webapp.js';
 
 export default class InitForm {
+  /** @type {HTMLFormElement} */
   form
+  /** @type {SimulationConfiguration} */
   configuration
+  /** @type {Uint8Array} */
   bytecode
 
   constructor() {
@@ -18,6 +20,7 @@ export default class InitForm {
   show() {
     return new Promise((res, rej) => {
       let submit = document.getElementById('conf_submit');
+      let download = document.getElementById('conf_download');
       const conf = {
         /** @type {HTMLInputElement} */
         miss_penalty: document.getElementById('conf_mem_misspenalty'),
@@ -62,7 +65,7 @@ export default class InitForm {
 
           label.textContent = files.join('\n');
         } else {
-            label.textContent = "Upload Assembly Source";
+          label.textContent = 'Upload Assembly Source';
         }
       };
 
@@ -96,6 +99,8 @@ export default class InitForm {
           if (files.length == 0)
             throw new Error('You must specify at least one file');
 
+          this.bytecode = assemble_files(files);
+
           let data_cache = new CacheConfiguration(
               data_enabled ? CacheMode.Associative : CacheMode.Disabled,
               data_set_bits, data_offset_bits, data_ways);
@@ -106,15 +111,36 @@ export default class InitForm {
           this.configuration = new SimulationConfiguration(
               miss_penalty, volatile_penalty, writethrough, pipelining,
               instruction_cache, data_cache);
-          this.bytecode = assemble_files(files);
 
           res();
         } catch (e) {
           rej(e);
-        } finally {
-          close();
         }
-      }
+      };
+
+      download.onclick = async () => {
+        try {
+          let files = [];
+
+          for (let i = 0; i < conf.asm.files.length; ++i)
+            files.push(new Input(
+                conf.asm.files[i].name, await conf.asm.files[i].text()));
+
+          if (files.length == 0)
+            throw new Error('You must specify at least one file');
+
+          this.bytecode = assemble_files(files);
+
+          let blob = new Blob([this.bytecode], { type: 'application/octet-stream' });
+          let a = document.createElement('a');
+          a.download = 'a.bin';
+          a.href = URL.createObjectURL(blob);
+          a.dispatchEvent(new MouseEvent('click'));
+          URL.revokeObjectURL(a.href);
+        } catch (e) {
+          rej(e);
+        }
+      };
     });
   }
 }

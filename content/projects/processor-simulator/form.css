@@ -1,3 +1,7 @@
+form {
+    position: relative;
+}
+
 form fieldset {
     border-radius: 4px;
 }
@@ -63,9 +67,19 @@ fieldset label {
 form input.submit-button {
     display: block;
     width: 4cm;
-    font-size: 8pt;
+    font-size: medium;
+    font-weight: bold;
     margin-top: 4pt;
     margin-left: auto;
     margin-right: auto;
     padding: 8pt;
+}
+
+form button.download-button {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: medium;
+    display: block;
+    padding: 8pt 8pt;
 }

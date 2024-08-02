@@ -11,7 +11,7 @@ main {
     font-size: medium;
 }
 
-main:has(form#sim_init:not(.hidden)){
+main:has(form#sim_init:not(.hidden)) {
     align-items: center;
 }
 
@@ -25,6 +25,7 @@ form#sim_init {
     border-radius: 6pt;
     box-shadow: 4pt 4pt black;
 }
+
 form#sim_init h2 {
     margin: 0;
 }
@@ -127,6 +128,15 @@ div.popup>div div.error-message {
     max-width: 16cm;
     overflow-x: scroll;
     padding: 10px 0 16px 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+div.popup>div div.message {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 div.popup button.close-button {
