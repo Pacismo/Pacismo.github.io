@@ -10,153 +10,144 @@ import init from './scripts/webapp.js';
 import populate from './scripts/yaml_populator.js';
 
 if (window.navigator.userAgent.toLowerCase().includes('mobi'))
-  await close_popup('Notice About Mobile Devices', c => {
-    c.classList = 'message';
-    let p = document.createElement('p');
-    p.textContent =
-        'Although it may be possible to use this on a mobile device, it is strongly recommended to use this page on a laptop or desktop computer.';
-    c.append(p);
-  });
+    await close_popup('Notice About Mobile Devices', c => {
+        c.classList = 'message';
+        let p = document.createElement('p');
+        p.textContent =
+            'Although it may be possible to use this on a mobile device, it is strongly recommended to use this page on a laptop or desktop computer.';
+        c.append(p);
+    });
 
 await init();
 
 let init_form = new InitForm;
-while (true) try {
-    await init_form.show();
-    break;
-  } catch (e) {
-    await close_popup('Error', container => {
-      container.className = 'error-message';
+while (true)
+    try {
+        await init_form.show();
+        break;
+    } catch (e) {
+        await close_popup('Error', container => {
+            container.className = 'error-message';
 
-      let p = document.createElement('code');
-      p.classList.add('monospace');
-      p.style =
-          'margin-top: 0; margin-bottom: 0; display: block; white-space: pre;';
-      container.appendChild(p);
-      p.textContent = e.toString();
-    });
-  }
+            let p = document.createElement('code');
+            p.classList.add('monospace');
+            p.style = 'margin-top: 0; margin-bottom: 0; display: block; white-space: pre;';
+            container.appendChild(p);
+            p.textContent = e.toString();
+        });
+    }
 
 document.getElementById('sim_main').classList.remove('hidden');
 document.getElementById('sim_init').classList.add('hidden');
 
-export const sim =
-    new SimulationState(init_form.configuration, init_form.bytecode);
+export const sim = new SimulationState(init_form.configuration, init_form.bytecode);
 
-export const pipeline = new Pipeline(
-    sim, 'pipeline_table', 'fetch_state', 'decode_state', 'execute_state',
-    'memory_state', 'writeback_state');
+export const pipeline = new Pipeline(sim, 'pipeline_table', 'fetch_state', 'decode_state', 'execute_state',
+                                     'memory_state', 'writeback_state');
 
 export const registers = new Registers(sim, 'register_table', {
-  v0: 'reg_v0_val',
-  v1: 'reg_v1_val',
-  v2: 'reg_v2_val',
-  v3: 'reg_v3_val',
-  v4: 'reg_v4_val',
-  v5: 'reg_v5_val',
-  v6: 'reg_v6_val',
-  v7: 'reg_v7_val',
-  v8: 'reg_v8_val',
-  v9: 'reg_v9_val',
-  va: 'reg_va_val',
-  vb: 'reg_vb_val',
-  vc: 'reg_vc_val',
-  vd: 'reg_vd_val',
-  ve: 'reg_ve_val',
-  vf: 'reg_vf_val',
-  sp: 'reg_sp_val',
-  bp: 'reg_bp_val',
-  lp: 'reg_lp_val',
-  pc: 'reg_pc_val',
-  zf: 'reg_zf_val',
-  of: 'reg_of_val',
-  eps: 'reg_eps_val',
-  nan: 'reg_nan_val',
-  inf: 'reg_inf_val'
+    v0 : 'reg_v0_val',
+    v1 : 'reg_v1_val',
+    v2 : 'reg_v2_val',
+    v3 : 'reg_v3_val',
+    v4 : 'reg_v4_val',
+    v5 : 'reg_v5_val',
+    v6 : 'reg_v6_val',
+    v7 : 'reg_v7_val',
+    v8 : 'reg_v8_val',
+    v9 : 'reg_v9_val',
+    va : 'reg_va_val',
+    vb : 'reg_vb_val',
+    vc : 'reg_vc_val',
+    vd : 'reg_vd_val',
+    ve : 'reg_ve_val',
+    vf : 'reg_vf_val',
+    sp : 'reg_sp_val',
+    bp : 'reg_bp_val',
+    lp : 'reg_lp_val',
+    pc : 'reg_pc_val',
+    zf : 'reg_zf_val',
+    of : 'reg_of_val',
+    eps : 'reg_eps_val',
+    nan : 'reg_nan_val',
+    inf : 'reg_inf_val'
 });
 
-export const watchlist = new Watchlist(
-    sim, 'watchlist_table', 'watchlist_address', 'watchlist_type');
+export const watchlist = new Watchlist(sim, 'watchlist_table', 'watchlist_address', 'watchlist_type');
 
-export const cache =
-    new Cache(sim, 'cache_view_content', 'cache_view_selector');
+export const cache = new Cache(sim, 'cache_view_content', 'cache_view_selector');
 
-export const memory = new Memory(
-    sim, 'memory_table', 'memory_view_pageid', 'memory_view_selector');
+export const memory = new Memory(sim, 'memory_table', 'memory_view_pageid', 'memory_view_selector');
 
 memory.on_cell_click = a => {
-  watchlist.address_field.value = a;
-  watchlist.add_to_watchlist();
+    watchlist.address_field.value = a;
+    watchlist.add_to_watchlist();
 };
 
 export function show_config() {
-  close_popup('Configuration', e => {
-    let list = document.createElement('ul');
-    list.classList = 'configuration-display';
-    e.appendChild(list);
+    close_popup('Configuration', e => {
+        let list = document.createElement('ul');
+        list.classList = 'configuration-display';
+        e.appendChild(list);
 
-    let aliases = new Map([
-      ['cache', 'Cache'], ['data', 'Data'], ['instruction', 'Instruction'],
-      ['mode', 'Mode'], ['set_bits', 'Set Bits'],
-      ['offset_bits', 'Offset Bits'], ['ways', 'Ways'],
-      ['miss_penalty', 'Miss Penalty'], ['pipelining', 'Pipelining'],
-      ['volatile_penalty', 'Volatile Penalty'], ['writethrough', 'Writethrough']
-    ]);
+        let aliases = new Map([
+            [ 'cache', 'Cache' ], [ 'data', 'Data' ], [ 'instruction', 'Instruction' ], [ 'mode', 'Mode' ],
+            [ 'set_bits', 'Set Bits' ], [ 'offset_bits', 'Offset Bits' ], [ 'ways', 'Ways' ],
+            [ 'miss_penalty', 'Miss Penalty' ], [ 'pipelining', 'Pipelining' ],
+            [ 'volatile_penalty', 'Volatile Penalty' ], [ 'writethrough', 'Writethrough' ]
+        ]);
 
-    const config = sim.get_configuration();
-    Object.entries(config.as_json()).forEach(populate(list, aliases));
-    config.free();
-  });
+        const config = sim.get_configuration();
+        Object.entries(config.as_json()).forEach(populate(list, aliases));
+        config.free();
+    });
 }
 
 export function update_views() {
-  pipeline.update();
-  registers.update();
-  watchlist.update();
-  cache.update();
-  memory.update();
+    pipeline.update();
+    registers.update();
+    watchlist.update();
+    cache.update();
+    memory.update();
 }
 
 export function show_stats() {
-  close_popup('Statistics', e => {
-    let list = document.createElement('ul');
-    list.classList = 'configuration-display';
-    e.appendChild(list);
+    close_popup('Statistics', e => {
+        let list = document.createElement('ul');
+        list.classList = 'configuration-display';
+        e.appendChild(list);
 
-    let aliases = new Map([
-      ['clocks', 'Clocks'], ['memory_accesses', 'Memory Accesses'],
-      ['cache_hits', 'Cache Hits'],
-      ['cache_conflict_misses', 'Cache Misses (Conflict)'],
-      ['cache_cold_misses', 'Cache Misses (Cold)']
-    ]);
+        let aliases = new Map([
+            [ 'clocks', 'Clocks' ], [ 'memory_accesses', 'Memory Accesses' ], [ 'cache_hits', 'Cache Hits' ],
+            [ 'cache_conflict_misses', 'Cache Misses (Conflict)' ], [ 'cache_cold_misses', 'Cache Misses (Cold)' ]
+        ]);
 
-    Object.entries(sim.get_stats()).forEach(populate(list, aliases));
-  });
+        Object.entries(sim.get_stats()).forEach(populate(list, aliases));
+    });
 }
 
 export function clock() {
-  sim.clock();
-  update_views();
+    sim.clock();
+    update_views();
 }
 
 export function step() {
-  sim.step();
-  update_views();
+    sim.step();
+    update_views();
 }
 
 export function run() {
-  popup((content, close) => {
-    let p = document.createElement('p');
-    p.textContent =
-        'Running the simulation to its end. This may take a while...';
-    content.append(p);
+    popup((content, close) => {
+        let p = document.createElement('p');
+        p.textContent = 'Running the simulation to its end. This may take a while...';
+        content.append(p);
 
-    setTimeout(function() {
-      sim.run();
-      close();
-      update_views();
-    }, 1000);
-  });
+        setTimeout(function() {
+            sim.run();
+            close();
+            update_views();
+        }, 1000);
+    });
 }
 
 update_views();
