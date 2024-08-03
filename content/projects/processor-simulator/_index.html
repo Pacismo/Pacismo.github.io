@@ -1,6 +1,7 @@
 +++
 title = "Processor Simulator"
 layout = "empty"
+about = "./about"
 date = 2024-07-30T15:36:54-05:00
 +++
 
@@ -11,6 +12,18 @@ date = 2024-07-30T15:36:54-05:00
 
     window.app = app;
 </script>
+
+<noscript>
+    <div class="popup">
+        <div>
+            <h2 style="margin: 0">Error: JavaScript is Required</h2>
+            <div class="message" style="border: none;">
+                <p>Scripts are required for this application to function.</p>
+                <p>Please enable JavaScript and make sure your browser supports WebAssembly.</p>
+            </div>
+        </div>
+    </div>
+</noscript>
 
 <form id="sim_init">
     <h2>Configure Simulation</h2>
@@ -66,10 +79,12 @@ date = 2024-07-30T15:36:54-05:00
         </label>
         <input type="file" id="asm_file" name="asm_file" accept=".asm,.txt" required multiple>
     </div>
-    <input class="submit-button" id="conf_submit" type="button" value="Start">
-    <button class="download-button" id="conf_download">
-        Download Binary
-    </button>
+    <div class="buttons">
+        <input class="submit-button" id="conf_submit" type="button" value="Start">
+        <button class="download-button" id="conf_download" title="Download Assembled File">
+            <i class="fa-solid fa-file-arrow-down"></i>
+        </button>
+    </div>
 </form>
 
 <div id="sim_main" class="hidden">
@@ -88,34 +103,40 @@ date = 2024-07-30T15:36:54-05:00
         <div id="pipeline_view">
             <h2 class="label">Pipeline</h2>
 
-            <table id="pipeline_table">
-                <tr>
-                    <th title="Click to show details." onclick="app.pipeline.show_details('fetch')">Fetch</th>
-                    <th title="Click to show details." onclick="app.pipeline.show_details('decode')">Decode</th>
-                    <th title="Click to show details." onclick="app.pipeline.show_details('execute')">Execute</th>
-                    <th title="Click to show details." onclick="app.pipeline.show_details('memory')">Memory</th>
-                    <th title="Click to show details." onclick="app.pipeline.show_details('writeback')">Writeback</th>
-                </tr>
-                <tr>
-                    <td title="Click to show details." id="fetch_state" onclick="app.pipeline.show_details('fetch')">
-                    </td>
-                    <td title="Click to show details." id="decode_state" onclick="app.pipeline.show_details('decode')">
-                    </td>
-                    <td title="Click to show details." id="execute_state"
-                        onclick="app.pipeline.show_details('execute')">
-                    </td>
-                    <td title="Click to show details." id="memory_state" onclick="app.pipeline.show_details('memory')">
-                    </td>
-                    <td title="Click to show details." id="writeback_state"
-                        onclick="app.pipeline.show_details('writeback')"></td>
-                </tr>
-            </table>
+            <div class="table-container">
+                <table id="pipeline_table">
+                    <tr>
+                        <th title="Click to show details." onclick="app.pipeline.show_details('fetch')">Fetch</th>
+                        <th title="Click to show details." onclick="app.pipeline.show_details('decode')">Decode</th>
+                        <th title="Click to show details." onclick="app.pipeline.show_details('execute')">Execute</th>
+                        <th title="Click to show details." onclick="app.pipeline.show_details('memory')">Memory</th>
+                        <th title="Click to show details." onclick="app.pipeline.show_details('writeback')">Writeback
+                        </th>
+                    </tr>
+                    <tr>
+                        <td title="Click to show details." id="fetch_state"
+                            onclick="app.pipeline.show_details('fetch')">
+                        </td>
+                        <td title="Click to show details." id="decode_state"
+                            onclick="app.pipeline.show_details('decode')">
+                        </td>
+                        <td title="Click to show details." id="execute_state"
+                            onclick="app.pipeline.show_details('execute')">
+                        </td>
+                        <td title="Click to show details." id="memory_state"
+                            onclick="app.pipeline.show_details('memory')">
+                        </td>
+                        <td title="Click to show details." id="writeback_state"
+                            onclick="app.pipeline.show_details('writeback')"></td>
+                    </tr>
+                </table>
+            </div>
         </div>
 
         <div id="register_view">
             <h2 class="label">Registers</h2>
 
-            <div>
+            <div class="table-container">
                 <table id="register_table">
                     <tr>
                         <th>V0</th>
@@ -223,7 +244,7 @@ date = 2024-07-30T15:36:54-05:00
                 <button id="memory_view_next" onclick="app.memory.next_page()">→</button>
             </div>
 
-            <div>
+            <div class="table-container">
                 <table id="memory_table"></table>
             </div>
         </div>

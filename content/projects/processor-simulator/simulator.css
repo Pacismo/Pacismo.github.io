@@ -3,6 +3,7 @@ body {
 }
 
 main {
+    position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -17,13 +18,16 @@ main:has(form#sim_init:not(.hidden)) {
 
 form#sim_init {
     display: block;
-    min-width: 10cm;
-    max-width: max-content;
+    max-width: 80%;
+    max-height: 80%;
+    height: fit-content;
+    width: fit-content;
     margin: auto;
     padding: 8px;
     border: 1pt solid black;
     border-radius: 6pt;
     box-shadow: 4pt 4pt black;
+    font-size: 10pt;
 }
 
 form#sim_init h2 {
@@ -99,44 +103,50 @@ div.sim-container>div:first-child>h2.label {
 }
 
 div.popup {
-    display: grid;
-    position: fixed;
+    display: flex;
+    position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-color: #00000088;
     z-index: 10;
 
-    grid-template-columns: auto max-content auto;
-    grid-template-rows: auto max-content auto;
+    flex-direction: column;
+    align-items: center;
 }
 
 div.popup>div {
-    display: block;
-    grid-row: 2;
-    grid-column: 2;
-    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
     padding: 4px;
     background-color: white;
     border: 1px solid black;
     border-radius: 6px;
     box-shadow: 4pt 4pt black;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: hidden;
 }
 
 div.popup>div div.error-message {
-    max-width: 16cm;
-    overflow-x: scroll;
+    flex: 1;
+    width: 80ch;
+    max-width: 100%;
+    overflow: scroll;
     padding: 10px 0 16px 0;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
 
 div.popup>div div.message {
+    flex: 1;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding-top: 4px;
     padding-bottom: 4px;
+    overflow: scroll;
 }
 
 div.popup button.close-button {
@@ -170,6 +180,18 @@ table th {
     padding: 0 .5ch;
 }
 
+div.table-container {
+    width: fit-content;
+    max-width: 80%;
+    overflow-x: scroll;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+div.table-container>table {
+    border: none;
+}
+
 table#pipeline_table th,
 table#pipeline_table td {
     min-width: 10ch;
@@ -182,13 +204,8 @@ table {
 }
 
 div:has(>table#register_table) {
-    width: 80%;
-    height: max-content;
-    overflow-x: scroll;
     overflow-y: hidden;
     scrollbar-width: none;
-    border: 1px solid black;
-    margin: 0 auto;
     transition: 500ms all ease;
 }
 
@@ -202,12 +219,9 @@ table#register_table {
 }
 
 div:has(>table#memory_table) {
-    max-width: max-content;
     height: 10cm;
     overflow: scroll;
     scrollbar-width: none;
-    border: 1px solid black;
-    margin: 0 auto;
     scroll-snap-type: block mandatory;
 }
 
@@ -235,7 +249,8 @@ table#memory_table tr:not(.header-row) th {
 }
 
 div:has(>ul.configuration-display) {
-    min-width: 10cm;
+    width: 10cm;
+    max-width: 100%;
 }
 
 ul.configuration-display {

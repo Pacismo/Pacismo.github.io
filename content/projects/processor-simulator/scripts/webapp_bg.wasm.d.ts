@@ -44,6 +44,7 @@ export function simulationstate_is_done(a: number): number;
 export function simulationstate_clock(a: number): number;
 export function simulationstate_step(a: number): number;
 export function simulationstate_run(a: number): void;
+export function simulationstate_run_for(a: number, b: number): number;
 export function simulationstate_read_address(a: number, b: number, c: number, d: number): void;
 export function simulationstate_read_pipeline_state(a: number): number;
 export function simulationstate_read_cache_state(a: number): number;

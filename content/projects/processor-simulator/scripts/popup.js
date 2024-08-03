@@ -5,7 +5,7 @@
  * @param {(content: HTMLDivElement, close: () => void) => void} populator
  */
 export function popup(populator) {
-  let body = document.getElementsByTagName('body').item(0);
+  let body = document.getElementsByTagName('main').item(0);
 
   /** @type {HTMLDivElement} */
   let popup = document.createElement('div');
@@ -28,7 +28,7 @@ export function popup(populator) {
  */
 export function close_popup(title, populator) {
   return new Promise((res, rej) => {
-    let body = document.getElementsByTagName('body').item(0);
+    let body = document.getElementsByTagName('main').item(0);
 
     /** @type {HTMLDivElement} */
     let popup = document.createElement('div');

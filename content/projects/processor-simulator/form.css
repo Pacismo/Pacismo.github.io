@@ -7,8 +7,8 @@ form fieldset {
 }
 
 form div.file-input {
+    display: block;
     margin-top: 4px;
-    width: 100%;
 }
 
 form div.file-input label {
@@ -60,26 +60,32 @@ fieldset.cache-config div.cache-entry.instruction {
     grid-column: instruction;
 }
 
-fieldset label {
-    min-width: 10%;
+form div.buttons {
+    display: grid;
+    grid-template-columns: 30% [start]auto [down]30%;
+    height: fit-content;
+    margin-top: 4pt;
 }
 
 form input.submit-button {
     display: block;
-    width: 4cm;
     font-size: medium;
     font-weight: bold;
-    margin-top: 4pt;
-    margin-left: auto;
-    margin-right: auto;
     padding: 8pt;
+    grid-column: start;
 }
 
 form button.download-button {
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-    font-size: medium;
-    display: block;
-    padding: 8pt 8pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20pt;
+    padding: 2pt 8pt;
+    grid-column: down;
+    max-width: fit-content;
+    margin-left: auto;
+}
+
+form button.download-button i {
+    height: fit-content;
 }

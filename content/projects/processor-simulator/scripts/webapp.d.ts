@@ -122,6 +122,11 @@ export class SimulationState {
 */
   run(): void;
 /**
+* @param {number} steps
+* @returns {boolean}
+*/
+  run_for(steps: number): boolean;
+/**
 * Reads a value from an address
 * @param {number} address
 * @param {MemoryType} memory_type
@@ -233,6 +238,7 @@ export interface InitOutput {
   readonly simulationstate_clock: (a: number) => number;
   readonly simulationstate_step: (a: number) => number;
   readonly simulationstate_run: (a: number) => void;
+  readonly simulationstate_run_for: (a: number, b: number) => number;
   readonly simulationstate_read_address: (a: number, b: number, c: number, d: number) => void;
   readonly simulationstate_read_pipeline_state: (a: number) => number;
   readonly simulationstate_read_cache_state: (a: number) => number;

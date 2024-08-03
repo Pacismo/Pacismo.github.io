@@ -596,9 +596,10 @@ export class SimulationState {
         try {
             const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
             _assertClass(config, SimulationConfiguration);
-            const ptr0 = passArray8ToWasm0(asm, wasm.__wbindgen_malloc);
-            const len0 = WASM_VECTOR_LEN;
-            wasm.simulationstate_new(retptr, config.__wbg_ptr, ptr0, len0);
+            var ptr0 = config.__destroy_into_raw();
+            const ptr1 = passArray8ToWasm0(asm, wasm.__wbindgen_malloc);
+            const len1 = WASM_VECTOR_LEN;
+            wasm.simulationstate_new(retptr, ptr0, ptr1, len1);
             var r0 = getInt32Memory0()[retptr / 4 + 0];
             var r1 = getInt32Memory0()[retptr / 4 + 1];
             var r2 = getInt32Memory0()[retptr / 4 + 2];
@@ -643,6 +644,14 @@ export class SimulationState {
     */
     run() {
         wasm.simulationstate_run(this.__wbg_ptr);
+    }
+    /**
+    * @param {number} steps
+    * @returns {boolean}
+    */
+    run_for(steps) {
+        const ret = wasm.simulationstate_run_for(this.__wbg_ptr, steps);
+        return ret !== 0;
     }
     /**
     * Reads a value from an address

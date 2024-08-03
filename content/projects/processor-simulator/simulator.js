@@ -2,12 +2,21 @@ import Cache from './scripts/cache.js';
 import InitForm from './scripts/init-form.js';
 import Memory from './scripts/memory.js';
 import Pipeline from './scripts/pipeline.js';
-import {close_popup} from './scripts/popup.js';
+import {close_popup, popup} from './scripts/popup.js';
 import Registers from './scripts/registers.js';
 import Watchlist from './scripts/watchlist.js';
 import {SimulationState} from './scripts/webapp.js';
 import init from './scripts/webapp.js';
 import populate from './scripts/yaml_populator.js';
+
+if (window.navigator.userAgent.toLowerCase().includes('mobi'))
+  await close_popup('Notice About Mobile Devices', c => {
+    c.classList = 'message';
+    let p = document.createElement('p');
+    p.textContent =
+        'Although it may be possible to use this on a mobile device, it is strongly recommended to use this page on a laptop or desktop computer.';
+    c.append(p);
+  });
 
 await init();
 
@@ -136,8 +145,18 @@ export function step() {
 }
 
 export function run() {
-  sim.run();
-  update_views();
+  popup((content, close) => {
+    let p = document.createElement('p');
+    p.textContent =
+        'Running the simulation to its end. This may take a while...';
+    content.append(p);
+
+    setTimeout(function() {
+      sim.run();
+      close();
+      update_views();
+    }, 1000);
+  });
 }
 
 update_views();

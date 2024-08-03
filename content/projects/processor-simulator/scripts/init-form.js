@@ -136,6 +136,7 @@ export default class InitForm {
           a.download = 'a.bin';
           a.href = URL.createObjectURL(blob);
           a.dispatchEvent(new MouseEvent('click'));
+          a.target = "_blank";
           URL.revokeObjectURL(a.href);
         } catch (e) {
           rej(e);
