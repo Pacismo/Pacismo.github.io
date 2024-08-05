@@ -10,7 +10,17 @@
             "request": "launch",
             "reAttach": true,
             "url": "http://localhost:1313/",
-            "webRoot": "${workspaceFolder}"
+            "webRoot": "${workspaceFolder}",
+            "pathMappings": [
+                {
+                    "url": "http://localhost:1313/",
+                    "path": "${workspaceFolder}/content/"
+                },
+                {
+                    "url": "http://localhost:1313/js",
+                    "path": "${workspaceFolder}/templates/franciscosp-theme/assets/js"
+                }
+            ]
         }
     ]
 }
