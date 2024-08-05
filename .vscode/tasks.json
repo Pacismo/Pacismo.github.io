@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Launch Hugo Server",
+            "type": "shell",
+            "command": "hugo",
+            "args": [
+                "serve",
+                "-D",
+                "-p",
+                "1313",
+                "--bind",
+                "localhost"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
