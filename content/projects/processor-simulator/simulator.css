@@ -9,7 +9,7 @@ main {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    font-size: medium;
+    font-size: 10pt;
 }
 
 main:has(form#sim_init:not(.hidden)) {
@@ -27,7 +27,6 @@ form#sim_init {
     border: 1pt solid black;
     border-radius: 6pt;
     box-shadow: 4pt 4pt black;
-    font-size: 10pt;
 }
 
 form#sim_init h2 {
@@ -59,10 +58,10 @@ div.sim-header {
 }
 
 div.sim-header button {
-    font-size: medium;
     font-weight: bold;
     padding: 4px;
     margin: 0 2px;
+    font-size: small;
 }
 
 div.sim-header button:hover {
@@ -152,7 +151,6 @@ div.popup>div div.message {
 div.popup button.close-button {
     display: block;
     margin: 4px 0 0 auto;
-    font-size: medium;
 }
 
 table td {
@@ -248,6 +246,21 @@ table#memory_table tr:not(.header-row) th {
     background-color: white;
 }
 
+table#memory_table td {
+    background-color: white;
+    transition: background-color 125ms ease;
+}
+
+table#memory_table td:hover {
+    background-color: #00F0F0;
+    transition: background-color 125ms ease;
+}
+
+table#memory_table td:active {
+    background-color: #88FFFF;
+    transition: background-color 125ms ease;
+}
+
 div:has(>ul.configuration-display) {
     width: 10cm;
     max-width: 100%;
@@ -277,7 +290,7 @@ div#memory_view_switcher {
 }
 
 div#memory_view_switcher button {
-    font-size: 12pt;
+    font-size: large;
     font-family: monospace;
 }
 
