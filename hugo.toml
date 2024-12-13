@@ -23,6 +23,10 @@ name = 'Projects'
 pageRef = '/projects'
 weight = 31
 
+[[params.socials]]
+name = "LinkedIn"
+link = "https://www.linkedin.com/in/fsantanapardo"
+
 [params]
 math = true
 fa_code = "ffc224c250"
