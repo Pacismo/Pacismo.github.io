@@ -1,4 +1,12 @@
 [[education]]
+institution = "Carnegie Mellon University"
+area = "Information Security"
+startDate = "2025-09-01"
+studyType = "Master of Science"
+url = "https://cmu.edu"
+image = "resume/cmu-seal.png"
+
+[[education]]
 institution = "University of Massachusetts, Amherst"
 area = "Computer Science"
 startDate = "2021-09-01"
@@ -7,3 +15,17 @@ score = "3.7 GPA"
 studyType = "Bachelor of Science"
 url = "https://umass.edu"
 image = "resume/umass-seal.png"
+
+[[projects]]
+name = "franciscosp.com"
+description = "This website, used as a blog and portfolio, uses the Hugo static generator and a custom hand-made theme."
+url = "/"
+
+[[projects]]
+name = "Simple Processor Simulator for a Custom Architecture"
+description = [
+    "Processor simulator for a custom architecture designed and implemented as coursework for a Graduate-level course.",
+    "A Web port of the simulator, which includes the assembler, is available on this web site. The port and project share the same codebase, the former merely being recompiled to WebAssembly.",
+]
+startDate = "2024-03-01"
+url = "/projects/processor-simulator/about/"
