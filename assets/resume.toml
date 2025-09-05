@@ -1,7 +1,7 @@
 [[education]]
 institution = "Carnegie Mellon University"
 area = "Information Security"
-startDate = "2025-09-01"
+startDate = "2025-08-18"
 studyType = "Master of Science"
 url = "https://cmu.edu"
 image = "resume/cmu-seal.png"
@@ -29,3 +29,37 @@ description = [
 ]
 startDate = "2024-03-01"
 url = "/projects/processor-simulator/about/"
+
+[[certificates]]
+name = "CompTIA A+ V14"
+description = "In progress"
+
+[[languages]]
+name = "English"
+proficiency = "Fluent"
+
+[[languages]]
+name = "Spanish"
+proficiency = "Conversational"
+
+[[skills]]
+category = "Programming and Querying Languages"
+entries = [
+    "C",
+    "C++",
+    "C# .NET",
+    "Rust",
+    "Java",
+    "TypeScript",
+    "JavaScript",
+    "PowerShell",
+    "SQL",
+]
+
+[[skills]]
+category = "Markup Languages"
+entries = ["HTML", "CSS", "XAML", "TOML", "XML", "JSON"]
+
+[[skills]]
+category = "Tools"
+entries = ["Node.JS", "NuGet", "Visual Studio", "Git", "Ghidra", "PostgreSQL", "CMake"]
