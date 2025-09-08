@@ -58,7 +58,7 @@ entries = [
 
 [[skills]]
 category = "Markup Languages"
-entries = ["HTML5", "CSS/SASS", "XAML", "TOML", "XML", "JSON"]
+entries = ["HTML5", "CSS/SASS", "XAML", "TOML", "XML", "JSON", "YAML"]
 
 [[skills]]
 category = "Tools"
