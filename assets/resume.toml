@@ -58,8 +58,17 @@ entries = [
 
 [[skills]]
 category = "Markup Languages"
-entries = ["HTML", "CSS", "XAML", "TOML", "XML", "JSON"]
+entries = ["HTML5", "CSS/SASS", "XAML", "TOML", "XML", "JSON"]
 
 [[skills]]
 category = "Tools"
-entries = ["Node.JS", "NuGet", "Visual Studio", "Git", "Ghidra", "PostgreSQL", "CMake"]
+entries = [
+    "Ghidra",
+    "WireShark",
+    "Node.JS",
+    "NuGet",
+    "Visual Studio",
+    "Git",
+    "PostgreSQL",
+    "CMake",
+]
